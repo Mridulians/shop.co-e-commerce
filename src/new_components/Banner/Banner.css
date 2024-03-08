@@ -1,0 +1,130 @@
+.banner {
+  background-color: #f2f0f1;
+  display: flex;
+  flex-direction: row;
+  padding: 4rem;
+  position: relative;
+}
+
+.content {
+  width: 50%;
+  padding: 2rem;
+}
+
+.content > .title {
+  font-size: 64px;
+  font-weight: bolder;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  line-height: 64px;
+  margin-bottom: 1rem;
+}
+.content > .banner_info {
+  font-size: 16px;
+  /* color: white; */
+  color: #421616;
+  text-shadow: 2px 2px 4px #847272;
+  margin-bottom: 1rem;
+}
+
+.content > button {
+  background-color: #000;
+  padding: 1rem 54px;
+  border-radius: 62px;
+  color: white;
+  font-weight: 400;
+  font-family: cursive;
+}
+
+.numbers {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.number1 > span {
+  font-size: 40px;
+  font-weight: 700;
+}
+.number1 > p {
+  font-size: 1rem;
+  color: gray;
+}
+
+.banner_img {
+  width: 50%;
+  position: relative;
+}
+.banner_img > img {
+  width: 100%;
+  max-width: 100%;
+  height: 600px;
+}
+.banner_img > .mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .banner {
+    padding: 3rem;
+  }
+
+  .content {
+    padding: 0rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .banner {
+    flex-direction: column;
+    padding: 6rem;
+  }
+  .banner_img,
+  .content {
+    width: 100%;
+    text-align: center;
+  }
+  .numbers {
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 700px) {
+  .banner {
+    padding: 4rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .banner {
+    padding: 2rem;
+  }
+  .content > .title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .numbers {
+    flex-wrap: wrap;
+  }
+  .number1 {
+    padding: 15px;
+    box-shadow: 10px 10px;
+    color: gray;
+    background-color: #e9e0e0;
+  }
+  .content > button {
+    margin-top: 10px;
+  }
+
+  .banner_img {
+    margin-top: 2rem;
+  }
+
+  .banner_img > img {
+    display: none;
+  }
+  .banner_img > .mobile {
+    display: inline;
+    width: 100%;
+    height: 400px;
+  }
+}

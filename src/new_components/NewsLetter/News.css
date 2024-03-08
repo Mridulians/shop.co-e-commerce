@@ -1,0 +1,117 @@
+.newsLetter {
+  background-color: black;
+  width: 80%;
+  margin: auto;
+  border-radius: 20px;
+  height: 180px;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 3rem;
+  align-items: center;
+}
+
+.newsLetter {
+  position: absolute;
+  left: 10%;
+  bottom: 90%;
+}
+
+.newletter_text {
+  font-size: 40px;
+  line-height: 45px;
+  font-weight: 700;
+  color: white;
+  width: 50%;
+}
+
+.newletter_email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 50%;
+  gap: 10px;
+}
+
+.newletter_email > .submit {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 16px;
+  padding: 0.5rem 5rem;
+  border-radius: 20px;
+}
+.newletter_email > .submit:hover {
+  background-color: #4e4141;
+  color: #ffffff;
+}
+
+.email {
+  position: relative;
+}
+
+.email > input {
+  padding: 0.5rem 5rem;
+  border-radius: 20px;
+}
+
+.email > input::placeholder {
+  opacity: 0.8;
+}
+
+.email > img {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .newsLetter {
+    width: 90%;
+    left: 5%;
+  }
+  .newletter_text {
+    font-size: 32px;
+    line-height: 35px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .newsLetter {
+    flex-direction: column;
+    height: 293px;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .newletter_text {
+    width: 100%;
+    text-align: center;
+  }
+  .newletter_email {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .newsLetter {
+    padding: 2rem 1rem;
+    bottom: 97%;
+  }
+  .email > input {
+    padding: 0.5rem 2rem;
+  }
+  .newletter_email > .submit {
+    padding: 0.5rem 3rem;
+    font-size: 14px;
+  }
+  .newletter_text {
+    text-align: start;
+  }
+  .email > img {
+    left: 4px;
+    width: 20px;
+    height: 20px;
+    top: 12px;
+  }
+}
