@@ -98,7 +98,7 @@ const Header = () => {
                   <a href="/sale">On Sale</a>
                 </li>
                 <li className="li_icon">
-                  <a href="/arrivals">New Arrivals</a>
+                  <a href="/arrival">New Arrivals</a>
                 </li>
                 <li className="li_icon">
                   <a href="/brands">Brands</a>
