@@ -4,6 +4,7 @@ import Dress2 from "../../ASSETS_NEW/dress2.png";
 import Dress3 from "../../ASSETS_NEW/dress3.png";
 import Dress4 from "../../ASSETS_NEW/dress4.png";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Arrival = () => {
   const data = [
@@ -78,9 +79,12 @@ const Arrival = () => {
 
       <div className="heading_viewMore">
         <h2 className="heading_viewMore_heading">NEW ARRIVALS</h2>
-        <a href="/arrival">
+        {/* <a href="/arrival">
           <FaArrowRight className="arrowForViewMore"/>
-        </a>
+        </a> */}
+        <Link to="/arrival">
+          <FaArrowRight className="arrowForViewMore" />
+        </Link>
       </div>
 
       <div className="clothCards">
@@ -98,7 +102,8 @@ const Arrival = () => {
       </div>
 
       <h6>
-        <a href="/arrival">View All</a>
+        {/* <a href="arrival">View All</a> */}
+        <Link to="/arrival">View All</Link>
       </h6>
     </div>
   );

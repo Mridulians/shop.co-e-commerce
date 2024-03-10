@@ -1,8 +1,12 @@
 import "./AllArrivals.css";
 import { useEffect, useState } from "react";
 import Add_To_Cart from "../../ASSETS_NEW/Cart.png";
+import { useDispatch } from "react-redux";
+import { add } from "../../Features/cartSlice";
 
 const AllArrivals = () => {
+  const dispatch = useDispatch();
+
   const [products, getProducts] = useState([]);
 
   const getData = async () => {
@@ -26,6 +30,11 @@ const AllArrivals = () => {
       : title;
   };
 
+  const addToCart = (item) => {
+    dispatch(add(item));
+    console.log(item)
+  };
+
   return (
     <div className="complete_arrivals">
       <h2 className="heading_text">
@@ -38,8 +47,8 @@ const AllArrivals = () => {
           <div className="new_card" key={id}>
             <img src={item.image} alt="" className="card_img" />
             <p className="item_title">{shortenTitle(item.title, 40)}</p>
-            <h3 className="card_price">{item.price}$</h3>
-            <button>
+            <h3 className="card_price">Rs{item.price}</h3>
+            <button onClick={() => addToCart(item)}>
               <img src={Add_To_Cart} alt="" /> Add To Cart
             </button>
           </div>

@@ -2,7 +2,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Sale from "./new_components/Sale/Sale";
 import Shop from "./new_components/Shop/Shop";
 import Brands from "./new_components/Brands/Brands";
@@ -18,22 +18,15 @@ const App = () => {
   return (
     <div>
       <Header />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/">
-            <Route path="/" index element={<Home />} />
-            <Route path="shop" index element={<Shop />} />
-            <Route path="sale" index element={<Sale />} />
-            <Route path="arrival" index element={<AllArrivals />} />
-            <Route path="brands" index element={<Brands />} />
-            <Route path="cart" index element={<Cart />} />
-            <Route path="account" index element={<Account />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-
-      {/* <Style /> */}
-
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="sale" element={<Sale />} />
+        <Route path="/arrival" element={<AllArrivals />} />
+        <Route path="brands" element={<Brands />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="account" element={<Account />} />
+      </Routes>
       <Footer />
     </div>
   );
