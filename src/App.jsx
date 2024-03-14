@@ -12,6 +12,7 @@ import Account from "./new_components/Account/Account";
 import Home from "./new_components/Home/Home";
 import Footer from "./new_components/Footer/Footer";
 import AllArrivals from "./new_components/Complete_Arrivals/AllArrivals";
+import Product from "./new_components/ProductDetails/Product";
 // import Style from "./new_components/Style/Style";
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="brands" element={<Brands />} />
         <Route path="cart" element={<Cart />} />
         <Route path="account" element={<Account />} />
+        <Route path="/product/:id" element={<Product />} />
       </Routes>
       <Footer />
     </div>

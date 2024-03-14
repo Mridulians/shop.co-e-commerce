@@ -5,8 +5,10 @@ import Dress3 from "../../ASSETS_NEW/dress3.png";
 import Dress4 from "../../ASSETS_NEW/dress4.png";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const Arrival = () => {
+// eslint-disable-next-line react/prop-types
+const Arrival = ({ title }) => {
   const data = [
     {
       img: Dress1,
@@ -73,12 +75,18 @@ const Arrival = () => {
     //   id: 8,
     // },
   ];
+  const navigate = useNavigate();
+
+  const productClicked = () => {
+    navigate("/arrival");
+  };
+
   return (
     <div className="arrival">
-      <h2 className="arrivalsheading">NEW ARRIVALS</h2>
+      <h2 className="arrivalsheading">{title}</h2>
 
       <div className="heading_viewMore">
-        <h2 className="heading_viewMore_heading">NEW ARRIVALS</h2>
+        <h2 className="heading_viewMore_heading">{title}</h2>
         {/* <a href="/arrival">
           <FaArrowRight className="arrowForViewMore"/>
         </a> */}
@@ -89,7 +97,7 @@ const Arrival = () => {
 
       <div className="clothCards">
         {data.map((item) => (
-          <div className="singleCard" key={item.id}>
+          <div className="singleCard" key={item.id} onClick={productClicked}>
             <img src={item.img} alt="" />
             <p className="clothName">{item.name}</p>
             <div className="cardInfo">

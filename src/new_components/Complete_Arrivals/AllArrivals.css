@@ -15,10 +15,9 @@
   gap: 2rem;
 }
 
-.allData > .new_card {
+.allData > .new_card1 {
   border: 2px solid rgb(236, 205, 205);
   width: 30%;
-  /* background-color: gray; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,23 +26,30 @@
   gap: 15px;
 }
 
-.allData > .new_card > .card_img {
-  width: 300px;
-  height: 300px;
+.allData > .new_card1 > .new_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-.new_card > .item_title {
+.new_card1 > .new_card > .card_img {
+  width: 200px;
+  height: 200px;
+}
+
+.new_card1 > .new_card > .item_title {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
 }
 
-.new_card > .card_price {
-  font-size: 1.5rem;
+.new_card1 > .new_card > .card_price {
+  font-size: 1.3rem;
   color: lightslategray;
 }
 
-.new_card > button {
+.new_card1 > button {
   background-color: crimson;
   display: flex;
   padding: 1rem 2rem;
@@ -65,29 +71,29 @@
     justify-content: center;
   }
 
-  .allData > .new_card {
+  .allData > .new_card1 {
     width: 45%;
   }
-  .allData > .new_card > .card_img {
+  /* .allData > .new_card > .card_img {
     width: 250px;
     height: 250px;
-  }
+  } */
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .complete_arrivals > .heading_text {
     font-size: 2rem;
     padding: 2rem 1rem;
   }
-  .allData > .new_card {
+  .allData > .new_card1 {
     width: 100%;
   }
-  .allData > .new_card > .card_img {
+  /* .allData > .new_card > .card_img {
     width: 200px;
     height: 200px;
-  }
+  } */
 
-  .new_card > .item_title {
+  .new_card1 > .new_card > .item_title {
     font-size: 1rem;
   }
 }
