@@ -4,6 +4,7 @@ import Dress6 from "../../ASSETS_NEW/dress6.png";
 import Dress7 from "../../ASSETS_NEW/dress7.png";
 import Dress8 from "../../ASSETS_NEW/dress8.png";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Selling = () => {
   const data = [
@@ -65,7 +66,8 @@ const Selling = () => {
         ))}
       </div>
       <h6>
-        <a href="/selling">View All</a>
+        {/* <a href="/selling">View All</a> */}
+        <Link to="/selling">View All</Link>
       </h6>
     </div>
   );

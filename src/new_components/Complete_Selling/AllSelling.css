@@ -1,0 +1,100 @@
+.complete_selling > .heading_text {
+    font-size: 3.125rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Playfair Display", serif;
+    padding: 2rem;
+  }
+  
+  .allData {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: space-evenly;
+    gap: 2rem;
+  }
+  
+  .allData > .new_card1 {
+    border: 2px solid rgb(236, 205, 205);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 15px;
+  }
+  
+  .allData > .new_card1 > .new_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .new_card1 > .new_card > .card_img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .new_card1 > .new_card > .item_title {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  
+  .new_card1 > .new_card > .card_price {
+    font-size: 1.3rem;
+    color: lightslategray;
+  }
+  
+  .new_card1 > button {
+    background-color: crimson;
+    display: flex;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    font-weight: 600;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .complete_selling > .heading_text {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .allData {
+      justify-content: center;
+    }
+  
+    .allData > .new_card1 {
+      width: 45%;
+    }
+    /* .allData > .new_card > .card_img {
+      width: 250px;
+      height: 250px;
+    } */
+  }
+  
+  @media screen and (max-width: 550px) {
+    .complete_selling > .heading_text {
+      font-size: 2rem;
+      padding: 2rem 1rem;
+    }
+    .allData > .new_card1 {
+      width: 100%;
+    }
+    /* .allData > .new_card > .card_img {
+      width: 200px;
+      height: 200px;
+    } */
+  
+    .new_card1 > .new_card > .item_title {
+      font-size: 1rem;
+    }
+  }
+  

@@ -13,6 +13,8 @@ import Home from "./new_components/Home/Home";
 import Footer from "./new_components/Footer/Footer";
 import AllArrivals from "./new_components/Complete_Arrivals/AllArrivals";
 import Product from "./new_components/ProductDetails/Product";
+import AllSelling from "./new_components/Complete_Selling/AllSelling";
+import Details from "./new_components/SellingDetails/Details";
 // import Style from "./new_components/Style/Style";
 
 const App = () => {
@@ -24,10 +26,12 @@ const App = () => {
         <Route path="/shop" element={<Shop />} />
         <Route path="sale" element={<Sale />} />
         <Route path="/arrival" element={<AllArrivals />} />
+        <Route path="/selling" element={<AllSelling />} />
         <Route path="brands" element={<Brands />} />
         <Route path="cart" element={<Cart />} />
         <Route path="account" element={<Account />} />
         <Route path="/product/:id" element={<Product />} />
+        <Route path="/selling/:id" element={<Details />} />
       </Routes>
       <Footer />
     </div>

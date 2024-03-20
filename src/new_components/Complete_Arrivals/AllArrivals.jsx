@@ -46,8 +46,8 @@ const AllArrivals = () => {
 
       <div className="allData">
         {products.map((item) => (
-          <div className="new_card1">
-            <Link to={`/product/${item.id}`} className="new_card" key={item.id}>
+          <div className="new_card1" key={item.id}>
+            <Link to={`/product/${item.id}`} className="new_card">
               <img src={item.image} alt="" className="card_img" />
 
               <p className="item_title">{shortenTitle(item.title, 40)}</p>

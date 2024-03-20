@@ -43,7 +43,7 @@ const Header = () => {
 
           <li>
             {/* <a href="/sale">On Sale</a> */}
-            <Link to="/sale">On Sale</Link>
+            <Link to="/selling">On Sale</Link>
           </li>
           <li>
             {/* <a href="arrival">New Arrivals</a> */}
