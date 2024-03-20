@@ -1,30 +1,18 @@
-/* eslint-disable react/jsx-key */
-import "./AllArrivals.css";
-import { useEffect, useState } from "react";
+/* eslint-disable react/prop-types */
+
+import "./Casual.css";
+import { useEffect } from "react";
 import Add_To_Cart from "../../ASSETS_NEW/Cart.png";
 import { useDispatch } from "react-redux";
 import { add } from "../../Features/cartSlice";
 import { Link } from "react-router-dom";
 
-const AllArrivals = () => {
+const Casual = ({ data, headline }) => {
   const dispatch = useDispatch();
 
-  const [products, getProducts] = useState([]);
-
-  const getData = async () => {
-    try {
-      const response = await fetch("https://fakestoreapi.com/products");
-      const data = await response.json();
-      getProducts(data);
-      console.log(data);
-    } catch (error) {
-      console.log("Error occurs", error);
-    }
-  };
+  console.log(data);
 
   useEffect(() => {
-    getData();
-
     window.scrollTo(0, 0); // Scrolls to the top of the page
   }, []);
 
@@ -41,15 +29,12 @@ const AllArrivals = () => {
 
   return (
     <div className="complete_arrivals">
-      <h2 className="heading_text">
-        Elevate your style game with the trendiest threads straight from our
-        newest collection.
-      </h2>
+      <h2 className="heading_text">{headline}</h2>
 
       <div className="allData">
-        {products.map((item) => (
+        {data.map((item) => (
           <div className="new_card1" key={item.id}>
-            <Link to={`/product/${item.id}`} className="new_card">
+            <Link to={`/${item.category}/${item.id}`} className="new_card">
               <img src={item.image} alt="" className="card_img" />
 
               <p className="item_title">{shortenTitle(item.title, 40)}</p>
@@ -66,4 +51,4 @@ const AllArrivals = () => {
   );
 };
 
-export default AllArrivals;
+export default Casual;

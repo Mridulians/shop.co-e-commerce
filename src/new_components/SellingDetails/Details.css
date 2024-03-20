@@ -94,6 +94,7 @@
   @media screen and (max-width: 950px) {
     .complete_details > .item_details > .counter_addtocart > .quantity_counter {
       gap: 1rem;
+      padding: 0rem 1rem;
     }
   }
   

@@ -5,6 +5,7 @@ import Dress7 from "../../ASSETS_NEW/dress7.png";
 import Dress8 from "../../ASSETS_NEW/dress8.png";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Selling = () => {
   const data = [
@@ -41,6 +42,13 @@ const Selling = () => {
       id: 4,
     },
   ];
+
+  const navigate = useNavigate();
+
+  const productClicked = () => {
+    navigate("/selling");
+  };
+
   return (
     <div className="selling">
       <h2 className="sellingheading">TOP SELLING</h2>
@@ -54,7 +62,7 @@ const Selling = () => {
 
       <div className="clothCards">
         {data.map((item) => (
-          <div className="singleCard" key={item.id}>
+          <div className="singleCard" key={item.id} onClick={productClicked}>
             <img src={item.img} alt="" />
             <p className="clothName">{item.name}</p>
             <div className="cardInfo">

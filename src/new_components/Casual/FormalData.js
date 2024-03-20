@@ -1,0 +1,130 @@
+const data = [
+  {
+    id: 111,
+    title:
+      "Symbol Premium Men's Wrinkle-Resistant Regular Fit Cotton Formal Shirt",
+    desc: "These formal shirts are made out of 100% double ply premium cotton fabric with liquid ammonia and moisture cure treatment that will resist wrinkles, add lustre and make the fabric breathable. The superlative craftsmanship with semi-cutaway collar, French placket, shanked and wrapped buttons, removable collar bones, and high quality interlinings would add on to the finesse of the garment. You may pair it up with a formal trouser and a blazer for a sharp formal look….. or roll up the sleeves and wear it with a chino or a clean Jeans for that smart casual occasion.",
+    image: "/Casual/formal1.png",
+    price: "1499",
+    category: "formal",
+  },
+  {
+    id: 112,
+    title: "Symbol Men's Regular Fit Formal Shirt",
+    desc: "An Amazon brand, Symbol is built on the pillars of quality, reliability and affordability, offering a range of lifestyle essentials that help you look good every day. This classic formal shirt is crafted with precision in cotton blend and two tone Fil a Fil fabric, to offer enhanced comfort and style, all at a great value. This shirt comes in a combo pack of 2 and is available in a range of colors to choose for any formal to a semi formal ocassion. To complete the look, pair it with an elegant solid formal trouser and brown leather shoes for a lasting impression. Now, look good every day with Symbol fashion essentials.",
+    image: "/Casual/formal2.webp",
+    price: "549",
+    category: "formal",
+  },
+  {
+    id: 113,
+    title: "FABRICALLY Men Regular Fit Solid Spread Collar Casual Shirt",
+    desc: "Elevate your formal wardrobe with our impeccably crafted men's regular-fit shirt. Tailored from high-quality cotton, this black and brown formal shirt for men exudes sophistication and style. Experience comfort and elegance without breaking the bank all our formal shirts are priced under 500. Make a statement on any occasion with the timeless appeal of our sky-blue shirt for men. Upgrade your ensemble with this versatile and affordable collection of formal shirts, designed to meet your every style need.",
+    image: "/Casual/formal3.webp",
+    price: "473",
+    category: "formal",
+  },
+  {
+    id: 114,
+    title: "Style Quotient Women Solid PolyMoss Regular Formal Shirt",
+    desc: "ACCENTUATE YOUR LOOK WEARING THIS CHIC AND STYLISH SOLID SHIRT FEATURING A MANDARIN COLLAR AND THREE-QUARTER PUFF SLEEVES. PAIR THIS SHIRT WITH BEIGE TROUSERS AND HEELS TO HAVE A COMPLETE LOOK.",
+    image: "/Casual/formal4.webp",
+    price: "489",
+    category: "formal",
+  },
+  {
+    id: 115,
+    title:
+      "UptoDate Mens Classic Polycotton Formal Trouser for Men Business Office Wear Pants",
+    desc: "Elevate your professional wardrobe with our Classic Polycotton Formal Trouser for Men. Crafted with a premium polycotton blend, these trousers provide exceptional comfort and durability, allowing you to stay focused on your day without sacrificing style. The timeless design exudes sophistication, making it an ideal choice for formal gatherings and office settings. Our trousers are available in a range of sizes to ensure a perfect fit for every body type. The wrinkle-resistant fabric ensures easy maintenance, giving you a polished appearance all day long. From important board meetings to after-work social events, our versatile trousers are designed to make you look and feel your best, no matter the occasion.",
+    image: "/Casual/formal5.webp",
+    price: "499",
+    category: "formal",
+  },
+  {
+    id: 116,
+    title: "U-TURN Men's Cotton Solid Formal/Semi Formal Shirt",
+    desc: "This Formal shirt offers a professional look for the true business man. It's the perfect day-to-night shirt. Wear it with some slacks to the office and throw on some jeans at night for drinks with the guys. Whatever the occasion this shirt will be your go-to. The style you want and the feel you need all rolled into this shirt. Please check the size chart for more details before ordering Material & Care100% Premium Cotton (Machine Wash Regular)Style Tip Enhance your look by wearing this trendy shirt. Team it with a pair of Chinos and white sneakers for a fun Smart Casual look About the Brand indoPrimo Finding Basic Menswear for daily use can be hard among todays Fast fashion world, where trends change daily. That's why we started IndoPrimo, to create a one stop shop for premium essential clothing for everyday use at rock bottom prices",
+    image: "/Casual/formal6.webp",
+    price: "378",
+    category: "formal",
+  },
+  {
+    id: 117,
+    title:
+      "IndoPrimo Formal Shirt for Men || Shirt for Men || Men Stylish Shirt || Men Plain Shirt || Men Solid Shirt",
+    desc: "This Formal shirt offers a professional look for the true business man. It's the perfect day-to-night shirt. Wear it with some slacks to the office and throw on some jeans at night for drinks with the guys. Whatever the occasion this shirt will be your go-to. The style you want and the feel you need all rolled into this shirt. Please check the size chart for more details before ordering Material & Care100% Premium Cotton (Machine Wash Regular)Style Tip Enhance your look by wearing this trendy shirt. Team it with a pair of Chinos and white sneakers for a fun Smart Casual look About the Brand indoPrimo Finding Basic Menswear for daily use can be hard among todays Fast fashion world, where trends change daily. That's why we started IndoPrimo, to create a one stop shop for premium essential clothing for everyday use at rock bottom prices",
+    image: "/Casual/formal7.webp",
+    price: "444",
+    category: "formal",
+  },
+  {
+    id: 118,
+    title: "CINDERS Women Regular Fit Formal Blazer",
+    desc: "CINDERS Formal Daily Wear blazer is made of Best-quality fabric which is soft, breathable, and comfortable, also it is popular for women's blazers. It is also versatile and easy to care for, making it a popular choice for everyday wear.",
+    image: "/Casual/formal8.webp",
+    price: "1499",
+    category: "formal",
+  },
+  {
+    id: 119,
+    title: "Ryko Formal Shoes for Men Classic Style Shoes(Black)",
+    desc: "The style, design, and all the features make this pair of shoes apt for travel. It keeps your feet comfy from inside so you could put them on for endless hours.",
+    image: "/Casual/formal9.webp",
+    price: "549",
+    category: "formal",
+  },
+  {
+    id: 120,
+    title: "Prolific Men's Formal Drving Loafer (Size UK 6-13) Brown",
+    desc: "Now showcase your gentility with perfection with this amazing pair of formal shoes for men by the named and famed hub of Prolific. With high end decent color, these formal shoes are a must have for every urban man. Crafted from premium quality 100% vegan leather and quality sole, these are comfortable and slip resistant and are bound to stay with you for quite a long time and also assures perfect business class experience. This shoe is crafted with the aid of experienced and skilled designers & craftsmen, who have a deep sense of latest fashion trends. The flawless make and light weight of footwear makes it easy for the wearer to maintain right posture and balance..",
+    image: "/Casual/formal10.webp",
+    price: "898",
+    category: "formal",
+  },
+  {
+    id: 121,
+    title: "Symbol Men's Slim Dress Pants",
+    desc: "Our range of formal trousers are designed keeping you in mind. With fits and styling that will make you stand apart and prices that will give you great value for your money, symbol formal trousers are simply impossible to say no to.",
+    image: "/Casual/formal11.webp",
+    price: "899",
+    category: "formal",
+  },
+  {
+    id: 122,
+    title: "SIRIL Women's Polyester Blend Woven Formal Top",
+    desc: "Fabric : Polyester Blend || Inner Fabric : N/A , Style: Formal Full Sleeve Shirt || Work: Woven",
+    image: "/Casual/formal12.webp",
+    price: "399",
+    category: "formal",
+  },
+
+  {
+    id: 123,
+    title: "Style Quotient Women Solid Beige Regular Formal Shirt",
+    desc: "Pattern Type : Solid , Sleeve Length : Long Sleeves",
+    image: "/Casual/formal13.webp",
+    price: "529",
+    category: "formal",
+  },
+
+  {
+    id: 124,
+    title: "Style Quotient Women Solid Polycotton Regular Formal Shirt",
+    desc: "CLASSIC SOLID FORMAL SHIRT WITH SPREAD COLLAR AND FULL SLEEVE TO ADD TO YOUR BACK-TO-WORK WARDROBE. PAIR IT WITH TIGHT FIT PANTS AND YOU'RE GOOD TO GO.",
+    image: "/Casual/formal14.webp",
+    price: "479",
+    category: "formal",
+  },
+
+  {
+    id: 125,
+    title: "Style Quotient Women Shirt",
+    desc: "This shirt is made with high-quality, lightweight fabric, it features a classic spread collar and a button-down placket that gives it a chic and sophisticated look. The full sleeves with cuffs add an element of elegance to the shirt, making it perfect for both casual and formal occasions. The curved bottom hemline adds a touch of femininity and enhances the shirt's overall aesthetic appeal. The red and white stripe pattern is timeless and can be easily paired with a variety of different bottoms, including jeans, skirts, and shorts. The shirt's loose fit makes it comfortable to wear all day long, while the structured design ensures that it maintains its shape and style.",
+    image: "/Casual/formal15.webp",
+    price: "579",
+    category: "formal",
+  },
+];
+
+export default data;

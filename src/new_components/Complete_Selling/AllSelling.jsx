@@ -5,10 +5,14 @@ import Add_To_Cart from "../../ASSETS_NEW/Cart.png";
 import { useDispatch } from "react-redux";
 import { add } from "../../Features/cartSlice";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const AllSelling = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  }, []);
 
-  console.log(Data)
+  console.log(Data);
   const dispatch = useDispatch();
 
   const shortenTitle = (title, maxLength) => {
@@ -25,7 +29,8 @@ const AllSelling = () => {
   return (
     <div className="complete_selling">
       <h2 className="heading_text">
-        Make a statement with our coveted best sellers , and sets the benchmark for contemporary fashion.
+        Make a statement with our coveted best sellers , and sets the benchmark
+        for contemporary fashion.
       </h2>
 
       <div className="allData">

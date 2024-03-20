@@ -2,13 +2,18 @@
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { remove } from "../../Features/cartSlice";
-import './Cart.css'
+import "./Cart.css";
+import { useEffect } from "react";
 
 const Cart = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  }, []);
+
   const dispatch = useDispatch();
   const productCard = useSelector((state) => state.cart);
-  
-  console.log(productCard)
+
+  console.log(productCard);
 
   const removeItem = (id) => {
     dispatch(remove(id));

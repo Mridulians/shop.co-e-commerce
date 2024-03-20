@@ -33,13 +33,23 @@
   width: 100%;
 }
 
-.style2,
-.style3 {
+.styleDesktop1 {
+  width: 40%;
+}
+
+.styleDesktop2 {
   width: 57%;
 }
-.style1,
-.style4 {
-  width: 40%;
+
+@media screen and (min-width: 500px) {
+  .style2,
+  .style3 {
+    height: 100%;
+  }
+  .style1,
+  .style4 {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -63,8 +73,9 @@
     gap: 1rem;
   }
 
-  .styleTypesMobile > img {
+  .styleTypesMobile .someLink > img {
     height: 190px;
+    width: 100%;
   }
 
   .styleTypes {

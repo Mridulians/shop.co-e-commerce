@@ -1,14 +1,14 @@
-// import React from 'react'
+/* eslint-disable react/prop-types */
 import "./Details.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { add } from "../../Features/cartSlice";
 import Rating from "../../ASSETS_NEW/Rating.png";
-import data from "../Complete_Selling/Seller";
+// import data from "../Complete_Selling/Seller";
 import Arrival from "../New_Arrivals/Arrival";
 
-const Details = () => {
+const Details = ({ data }) => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const [selectedSize, setSelectedSize] = useState("Medium");
@@ -18,9 +18,12 @@ const Details = () => {
   // Find the selected product based on id
   useEffect(() => {
     const product = data.find((item) => item.id === parseInt(id));
+    console.log(product);
     if (product) {
       setSelectedProduct(product);
     }
+
+    window.scrollTo(0, 0); // Scrolls to the top of the page
   }, [id]);
 
   if (!selectedProduct) {

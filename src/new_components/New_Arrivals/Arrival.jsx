@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const Arrival = ({ title }) => {
+ 
   const data = [
     {
       img: Dress1,
