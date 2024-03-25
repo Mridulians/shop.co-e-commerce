@@ -21,6 +21,7 @@ import PartyData from "./new_components/Casual/PartyData";
 import FormalData from "./new_components/Casual/FormalData";
 import GymData from "./new_components/Casual/GymData";
 import Data from "./new_components/Complete_Selling/Seller";
+import CheckoutPage from "./new_components/CheckoutPage/CheckoutPage";
 // import Style from "./new_components/Style/Style";
 
 const App = () => {
@@ -29,6 +30,8 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
+
         <Route path="/shop" element={<Shop />} />
         <Route path="sale" element={<Sale />} />
         <Route path="/arrival" element={<AllArrivals />} />

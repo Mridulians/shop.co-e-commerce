@@ -1,4 +1,4 @@
-.complete_arrivals > .heading_text {
+/* .complete_arrivals > .heading_text {
   font-size: 3.125rem;
   text-align: center;
   font-weight: 600;
@@ -18,7 +18,6 @@
 .allData > .new_card {
   border: 2px solid rgb(236, 205, 205);
   width: 30%;
-  /* background-color: gray; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,5 +88,139 @@
 
   .new_card > .item_title {
     font-size: 1rem;
+  }
+} */
+
+.cartHeading {
+  font-size: 40px;
+  font-weight: bolder;
+  font-family: fantasy;
+  padding: 2rem 5rem;
+}
+
+.completeCart {
+  display: flex;
+  flex-direction: row;
+  padding: 0rem 5rem;
+  justify-content: space-between;
+}
+
+.cartAllData {
+  border: 2px solid #d3d0d0;
+  width: 60%;
+  padding: 1rem;
+}
+
+.cartAllData > .new_card > .card_img {
+  width: 124px;
+  height: 124px;
+  padding: 1rem;
+  background-color: #dcd1d1;
+  border: 2px solid #b3a6a6;
+  border-radius: 10px;
+}
+
+.cartAllData > .new_card > .card_content > .deleteBtn {
+  width: 24px;
+  height: 24px;
+}
+
+.cartAllData > .new_card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.new_card > .card_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.new_card > .card_content > .price_title > p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.new_card > .card_content > .price_title > h3 {
+  font-size: 20px;
+  color: #9c8d8d;
+  font-weight: bolder;
+}
+
+.cartTotalPrice {
+  border: 2px solid #d3d0d0;
+  width: 35%;
+  padding: 1rem;
+  height: max-content;
+}
+
+.cartTotalPrice > h2 {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.cartTotalPrice > .prices {
+  margin-top: 1rem;
+}
+
+.cartTotalPrice > .prices > .priceSeparation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.cartTotalPrice > .checkout {
+  display: flex;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 20px;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.cart_mridul {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 800px) {
+  .completeCart {
+    flex-direction: column;
+    padding: 0rem 1rem;
+    gap: 2rem;
+  }
+
+  .cartAllData {
+    width: 100%;
+  }
+
+  .cartTotalPrice {
+    width: 100%;
+  }
+
+  .cartHeading {
+    font-size: 32px;
+    padding: 2rem;
+  }
+
+  .cartAllData > .new_card > .card_img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .new_card > .card_content > .price_title > p {
+    font-size: 16px;
   }
 }
