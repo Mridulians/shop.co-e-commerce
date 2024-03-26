@@ -1,0 +1,12 @@
+.orderConfirm {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0rem 1rem;
+  font-family: cursive;
+}
+
+.orderAni {
+  margin: auto;
+  height: 20rem;
+}

@@ -8,8 +8,11 @@ import Paypal from "../../ASSETS_NEW/Paypal.png";
 import { useEffect } from "react";
 import "./CheckoutPage.css";
 import Checkout from "../Cart/Checkout";
+import { useNavigate } from "react-router-dom";
 
 const CheckoutPage = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     window.scrollTo(0, 0); // Scrolls to the top of the page
   }, []);
@@ -50,6 +53,10 @@ const CheckoutPage = () => {
   ).toFixed(2);
 
   console.log(finalPrice);
+
+  const handleOrder = () => {
+    navigate("/order");
+  };
 
   return (
     <>
@@ -111,7 +118,7 @@ const CheckoutPage = () => {
         />
       </div>
       <div className="orderNow">
-        <button>Order Now</button>
+        <button onClick={handleOrder}>Confirm Order</button>
       </div>
     </>
   );

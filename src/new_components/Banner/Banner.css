@@ -93,15 +93,14 @@
     padding: 4rem;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .banner {
-    padding: 2rem;
+    padding: 6rem 2rem 2rem 2rem;
   }
   .content > .title {
     font-size: 36px;
     line-height: 40px;
   }
-
   .numbers {
     flex-wrap: wrap;
   }

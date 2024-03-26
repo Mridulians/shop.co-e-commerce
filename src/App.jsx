@@ -22,6 +22,7 @@ import FormalData from "./new_components/Casual/FormalData";
 import GymData from "./new_components/Casual/GymData";
 import Data from "./new_components/Complete_Selling/Seller";
 import CheckoutPage from "./new_components/CheckoutPage/CheckoutPage";
+import Order from "./new_components/FinalOrder/Order";
 // import Style from "./new_components/Style/Style";
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/order" element={<Order />} />
 
         <Route path="/shop" element={<Shop />} />
         <Route path="sale" element={<Sale />} />

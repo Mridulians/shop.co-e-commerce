@@ -3,7 +3,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 4rem;
+  padding-top: 6rem;
+  /* margin-top: 4rem; */
 }
 
 .options {
@@ -57,16 +58,20 @@
     flex-direction: column;
     padding: 0rem 1rem;
     gap: 2rem;
+    /* margin-top: 2rem; */
   }
   .checkoutContent > h1 {
     font-size: 28px;
     text-align: center;
   }
 
-  .checkoutPage {
-    margin-top: 2rem;
-  }
   .optionChoices > h2 {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .checkoutPage {
+    padding: 6rem 1rem 0rem 1rem;
   }
 }

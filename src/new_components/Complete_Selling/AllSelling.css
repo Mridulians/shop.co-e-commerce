@@ -80,10 +80,10 @@
     } */
   }
   
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 600px) {
     .complete_selling > .heading_text {
       font-size: 2rem;
-      padding: 2rem 1rem;
+      padding: 6rem 1rem 0rem 1rem;
     }
     .allData > .new_card1 {
       width: 100%;
@@ -97,4 +97,6 @@
       font-size: 1rem;
     }
   }
+  
+
   

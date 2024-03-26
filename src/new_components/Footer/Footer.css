@@ -101,6 +101,11 @@
     padding: 2rem;
   }
 }
+@media screen and (max-width: 600px) {
+  .complete_footer {
+    padding-bottom: 8rem;
+  }
+}
 @media screen and (max-width: 700px) {
   .payments {
     justify-content: center;

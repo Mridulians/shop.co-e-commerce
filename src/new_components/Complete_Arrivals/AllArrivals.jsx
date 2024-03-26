@@ -41,7 +41,7 @@ const AllArrivals = () => {
 
   return (
     <div className="complete_arrivals">
-      <h2 className="heading_text">
+      <h2 className="heading">
         Elevate your style game with the trendiest threads straight from our
         newest collection.
       </h2>

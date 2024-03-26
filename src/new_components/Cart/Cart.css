@@ -192,7 +192,8 @@
   text-align: center;
   font-size: 3rem;
   font-weight: bolder;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
+  padding-top: 6rem;
 }
 
 @media screen and (max-width: 800px) {
@@ -222,5 +223,11 @@
 
   .new_card > .card_content > .price_title > p {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cartHeading {
+    padding: 6rem 2rem 2rem 2rem;
   }
 }
