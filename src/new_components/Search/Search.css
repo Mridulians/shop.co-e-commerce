@@ -1,0 +1,26 @@
+.searchInput {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .searchInput {
+    display: block;
+    /* width: 100%; */
+    border: 2px solid gray;
+    width: 90%;
+    /* margin: 1rem 1rem 0rem 1rem; */
+    margin: auto;
+    padding-left: 1rem;
+    border-radius: 10px;
+    height: 2rem;
+  }
+}
+
+.searchedHeading {
+  font-size: 3.125rem;
+  text-align: center;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+  /* padding: 2rem; */
+  padding: 8rem 2rem 2rem 2rem;
+}

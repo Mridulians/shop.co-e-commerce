@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding-top: 8rem;
 }
 
 .complete_details > .complete_details_img {
@@ -100,6 +101,7 @@
 @media screen and (max-width: 750px) {
   .complete_details {
     flex-direction: column;
+    padding-top: 6rem;
   }
   .complete_details > .complete_details_img {
     width: 90%;

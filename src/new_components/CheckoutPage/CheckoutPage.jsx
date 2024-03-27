@@ -58,6 +58,9 @@ const CheckoutPage = () => {
     navigate("/order");
   };
 
+  // Function to check if a payment method is selected
+  const isPaymentSelected = selectedPayment !== "";
+
   return (
     <>
       <div className="checkoutPage">
@@ -118,7 +121,9 @@ const CheckoutPage = () => {
         />
       </div>
       <div className="orderNow">
-        <button onClick={handleOrder}>Confirm Order</button>
+        <button onClick={handleOrder} disabled={!isPaymentSelected}>
+          Confirm Order
+        </button>
       </div>
     </>
   );

@@ -8,7 +8,7 @@ import Shop from "./new_components/Shop/Shop";
 import Brands from "./new_components/Brands/Brands";
 import Header from "./new_components/Header/Header";
 import Cart from "./new_components/Cart/Cart";
-import Account from "./new_components/Account/Account";
+import Search from "./new_components/Search/Search";
 import Home from "./new_components/Home/Home";
 import Footer from "./new_components/Footer/Footer";
 import AllArrivals from "./new_components/Complete_Arrivals/AllArrivals";
@@ -23,7 +23,9 @@ import GymData from "./new_components/Casual/GymData";
 import Data from "./new_components/Complete_Selling/Seller";
 import CheckoutPage from "./new_components/CheckoutPage/CheckoutPage";
 import Order from "./new_components/FinalOrder/Order";
-// import Style from "./new_components/Style/Style";
+import ShopData from "./new_components/Shop/ShopData";
+import BrandData from "./new_components/Brands/BrandData";
+import DesktopSearch from "./new_components/Search/DesktopSearch";
 
 const App = () => {
   return (
@@ -33,17 +35,19 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/order" element={<Order />} />
-
+        <Route path="/ds" element={<DesktopSearch />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="sale" element={<Sale />} />
         <Route path="/arrival" element={<AllArrivals />} />
         <Route path="/selling" element={<AllSelling />} />
-        <Route path="brands" element={<Brands />} />
+        <Route path="/brands" element={<Brands />} />
+        <Route path="/brands/:id" element={<Details data={BrandData} />} />
         <Route path="cart" element={<Cart />} />
-        <Route path="account" element={<Account />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/search/:id" element={<Details data={ShopData} />} />
         <Route path="/product/:id" element={<Product />} />
         <Route path="/selling/:id" element={<Details data={Data} />} />
-
+        <Route path="/shop/:id" element={<Details data={ShopData} />} />
         <Route path="/formal/:id" element={<Details data={FormalData} />} />
         <Route path="/casual/:id" element={<Details data={CasualData} />} />
         <Route path="/party/:id" element={<Details data={PartyData} />} />

@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  padding-top: 6rem;
+  padding-top: 8rem;
   /* margin-top: 4rem; */
 }
 
@@ -51,6 +51,10 @@
   padding: 1rem 2rem;
   border-radius: 10px;
   font-weight: 700;
+}
+
+.orderNow > button:disabled {
+  background-color: #e88e8e;
 }
 
 @media screen and (max-width: 800px) {

@@ -1,7 +1,12 @@
 import "./Banner.css";
 import BannerImg from "../../ASSETS_NEW/DesktopImage.png";
-import Mobile from '../../ASSETS_NEW/MobileImage.png'
+import Mobile from "../../ASSETS_NEW/MobileImage.png";
+import { useNavigate } from "react-router-dom";
 const Banner = () => {
+  const navigate = useNavigate();
+  const shopNow = () => {
+    navigate("/shop");
+  };
   return (
     <div className="banner">
       <div className="content">
@@ -13,7 +18,9 @@ const Banner = () => {
           designed to bring out your individuality and cater to your sense of
           style.
         </p>
-        <button className="shop_now">Shop now</button>
+        <button onClick={shopNow} className="shop_now">
+          Shop now
+        </button>
 
         <div className="numbers">
           <div className="number1">

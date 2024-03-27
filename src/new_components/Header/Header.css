@@ -5,8 +5,17 @@
   flex-direction: row;
   align-items: center;
   padding: 0rem 5rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  /* margin-top: 2rem; */
+  /* margin-bottom: 2rem; */
+  z-index: 12;
+  height: 80px;
+  border-bottom: 2px solid #998b8b;
+  position: fixed;
+  width: 100%;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: inset rgba(0, 0, 0, 0.3) 0px 8px 32px 8px;
+  background-color: #b8b8b8;
 }
 
 .logo {
@@ -153,6 +162,9 @@
   border-bottom: 2px solid #998b8b;
   position: fixed;
   width: 100%;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: inset rgba(0, 0, 0, 0.3) 0px 8px 32px 8px;
   background-color: #ffe3e3;
 }
 

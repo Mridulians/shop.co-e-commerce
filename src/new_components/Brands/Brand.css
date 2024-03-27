@@ -1,0 +1,40 @@
+/* .brands {
+  padding: 8rem 6rem 6rem 6rem;
+} */
+
+.brands > h1 {
+  font-size: 3.125rem;
+  text-align: center;
+  font-weight: 600;
+  font-family: "Playfair Display", serif;
+  /* padding: 2rem; */
+  padding: 8rem 2rem 2rem 2rem;
+}
+
+.brands_input {
+  display: flex;
+  padding: 2rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  background-color: #000000;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.selected {
+  border: 2px solid red;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .brands > h1 {
+    font-size: 32px;
+    padding: 6rem 2rem 0rem 2rem;
+  }
+  .brands_input {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}

@@ -6,3 +6,5 @@ const Sale = () => {
 }
 
 export default Sale
+
+

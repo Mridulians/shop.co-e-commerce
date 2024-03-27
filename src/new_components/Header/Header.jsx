@@ -2,81 +2,56 @@ import "./Header.css";
 import Name from "../../ASSETS_NEW/Name.png";
 import Cart from "../../ASSETS_NEW/Cart.png";
 import Account from "../../ASSETS_NEW/Account.png";
-import { FaCaretDown, FaSearch } from "react-icons/fa";
-// import MobileMenu from "../../ASSETS_NEW/MobileMenu.png";
-// import { useState } from "react";
+import { FaSearch } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import Mridul from "./Mridul";
 
 const Header = () => {
   const products = useSelector((state) => state.cart);
-  // const [toggle, setToggle] = useState(false);
+
   return (
     <>
       <div className="header">
-        {/* <a className="logo" href="/">
-          <img src={Name} alt="" />
-        </a> */}
         <Link className="logo" to="/">
           <img src={Name} alt="" />
         </Link>
 
         <div className="links">
           <li className="li_icon">
-            {/* <a href="/shop">Shop</a> <FaCaretDown /> */}
-            <Link to="/shop">Shop</Link> <FaCaretDown />
-            <ul className="subMenu">
+            <Link to="/shop">Shop</Link>
+            {/* <FaCaretDown /> */}
+            {/* <ul className="subMenu">
               <li className="subMenuLi">
-                {/* <a href="/men">Men</a> */}
                 <Link to="/men">Men</Link>
               </li>
               <li className="subMenuLi">
-                {/* <a href="/women">Women</a> */}
                 <Link to="/women">Women</Link>
               </li>
               <li className="subMenuLi">
-                {/* <a href="/children">Children</a> */}
                 <Link to="/children">Children</Link>
               </li>
-            </ul>
+            </ul>  */}
           </li>
 
           <li>
-            {/* <a href="/sale">On Sale</a> */}
             <Link to="/selling">On Sale</Link>
           </li>
           <li>
-            {/* <a href="arrival">New Arrivals</a> */}
             <Link to="/arrival">New Arrival</Link>
           </li>
           <li>
-            {/* <a href="/brands">Brands</a> */}
             <Link to="/brands">Brands</Link>
           </li>
         </div>
-
         <div className="searchBar">
-          <input
-            type="text"
-            className="searchBar"
-            placeholder="Search for products..."
-          />
-          <FaSearch className="magni" />
+          <Mridul />
         </div>
         <div className="cart_logo">
-          {/* <a href="/cart" style={{ display: "flex" }}>
-            <img src={Cart} alt="" />
-            <sub>{products.length}</sub>
-          </a> */}
-
           <Link to="/cart" style={{ display: "flex" }}>
             <img src={Cart} alt="" />
             <sub>{products.length}</sub>
           </Link>
-
-          {/* <a href="/account">
-            <img src={Account} alt="" />
-          </a> */}
 
           <Link to="/account">
             <img src={Account} alt="" />
@@ -139,8 +114,12 @@ const Header = () => {
             <img src={Cart} alt="" />
             <sub>{products.length}</sub>
           </Link>
-          <Link to="/account">
-            <img src={Account} alt="" />
+          <Link to="/search">
+            {/* <img src={Account} alt="" /> */}
+            <FaSearch
+              className="searchIcon"
+              style={{ width: "20px", height: "20px" }}
+            />
           </Link>
         </div>
       </div>

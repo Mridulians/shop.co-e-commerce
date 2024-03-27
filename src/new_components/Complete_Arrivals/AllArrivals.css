@@ -3,7 +3,8 @@
   text-align: center;
   font-weight: 600;
   font-family: "Playfair Display", serif;
-  padding: 2rem;
+  /* padding: 2rem; */
+  padding: 8rem 2rem 2rem 2rem;
 }
 
 .allData {

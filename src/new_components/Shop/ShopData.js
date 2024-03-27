@@ -1,0 +1,661 @@
+const ShopData = [
+  {
+    id: 453,
+    title: "UZARUS Womens Dry Fit Workout Top Sports Gym T-Shirt",
+    desc: "Style: Designed for comfort and great for all year round use Proudly made in India. Please refer to the size chart in the product images for a perfect fit.",
+    image: "/Gym/gym10.webp",
+    price: "349",
+    category: "gym",
+  },
+  {
+    id: 454,
+    title: "Ap'pulse Women's Long Sleeve Thumbopen 1/4 Zip Hi Neck Tshirt",
+    desc: "Go for the most comfortable wear by bagging this tops that comes from ap'pulse. An everyday essential, tops is cut out from soft material. A relaxed fit. Elevating the trendy look of this top from ap’pulse with sporty touch design. High on comfort and soft on skin",
+    image: "/Gym/gym11.webp",
+    price: "450",
+    category: "gym",
+  },
+  {
+    id: 21,
+    title: "ANNI DESIGNER Women Kurta with Palazzo",
+    desc: "ANNI DESIGNER Women's Cotton Blend Straight Printed Kurta with Palazzo (Chinki Green_L_Green_Large).This set includes: 1 Kurta with 1 Pant || Work : Printed || Neck Style:- Round Neck",
+    image: "/Seller/seller1.jpg",
+    price: "489",
+  },
+  {
+    id: 22,
+    title:
+      "Lymio Men Cargo || Men Cargo Pants || Men Cargo Pants Cotton || Cargos for Men (Cargo-01-04)",
+    desc: "Men Cargo || Men Cargo Pants || Men Cargo Pants Cotton || Cargos for Men",
+    image: "/Seller/seller2.jpg",
+    price: "649",
+  },
+  {
+    id: 23,
+    title: "Allen Solly Men's Regular Fit Polo",
+    desc: "Ace weekend dressing in this blue solid Polo Neck T-shirt from Allen Solly by Allen Solly.Manufacturer : Aditya Birla Fashion and Retail Limited",
+    image: "/Seller/seller3.jpg",
+    price: "699",
+  },
+  {
+    id: 24,
+    title:
+      "Lymio Casual Shirt for Men|| Shirt for Men|| Men Stylish Shirt (D-Crush-16-23)",
+    desc: "Casual Shirt for Men|| Shirt for Men|| Men Stylish Shirt",
+    image: "/Seller/seller4.jpg",
+    price: "379",
+  },
+  {
+    id: 25,
+    title: "Adidas Men's Clinch-X M Running Shoe",
+    desc: "Mesh upper for lightweight and breathability ;These are Men Running Shoes ;Brand: Adidas ;Midsole: lightstrike IMEVA midsole with visible adiprene providing protection from harmful impact forces.",
+    image: "/Seller/seller5.jpg",
+    price: "1099",
+  },
+  {
+    id: 222,
+    title:
+      "Casual Shirt for Men|| Shirt for Men|| Men Stylish Shirt || Men Rib Shirt",
+    image: "/Formal/casual1.jpg",
+    price: "479",
+    category: "casual",
+  },
+  {
+    id: 223,
+    title:
+      "Leriya Fashion Textured Shirts for Men || Casual Shirt for Men || Shirt for Men|| Men Stylish Shirt || Men Fancy Shirt || Men Full Sleeve Shirt || Plain Shirts for Men",
+    desc: "Popcorn material shirts have a distinctive textured surface, which gives them a three-dimensional appearance. The fabric is often lightweight and breathable, making it comfortable for warm weather or as a layering piece in cooler weather. Popcorn material shirts are generally considered casual wear. They are great for relaxed and informal occasions. You can find both short-sleeve and long-sleeve versions, making them suitable for different seasons. Popcorn material shirts come in a range of colors, allowing you to choose one that suits your personal style. While they are typically worn for leisure and casual purposes, you can pair them with jeans, shorts, or chinos to create a laid-back and stylish look. Men's shirts are incredibly versatile. They can be dressed up or down, making them suitable for a wide range of occasions, from formal events to casual outings. Dress shirts are an essential part of professional attire, suitable for office wear and formal events. They convey a polished and professional appearance.",
+    image: "/Formal/casual2.jpg",
+    price: "439",
+    category: "casual",
+  },
+  {
+    id: 224,
+    title: "DHRUVI TRENDZ Men's Regular Fit Shirt",
+    desc: "Men's Fashion Products Are Our partywear outfit collection for men includes a shirt neckline, Short-sleeves, and a button placket on the front. Perfect Regular Fit with Best Look. simple spread collar and soft felt in the fabric which makes the shirt very easy and comfortable to wear casually. From the newest designs and trendiest styles for men we are making fashionable clothing affordable. Shirts feel soft and light on the body. Pairing with the right colored denim we can imagine the outfit is best suited for dining parties and night outs. Our men's Tropical shirts are made of the Best fabric which is lightweight and breathable. Perfect for summer and hot weather keeps your body dry and comfortable all day. This casual summer shirts design with a Fancy Hawaii collar, short sleeve, botton down, Tropical print and classic regular fit. This beach shirts with multiple unique color and pattern, each of which is a unique experience, make you shine this summer. Perfect gift for yourself, families, or friends. Perfect for camp, sun beach, birthday party, vacation, bachelor party, cruise, camp, or any casual daily wear.",
+    image: "/Formal/casual3.jpg",
+    price: "289",
+    category: "casual",
+  },
+  {
+    id: 225,
+    title:
+      "Symbol Women's Cotton Blend Solid Regular Fit Long Sleeve Hooded Terry Sweatshirt Forest Green, Large",
+    desc: "Start every outfit with Symbol's elevated wardrobe basics that are versatile, stylish and compliment your everyday look. This regular fit sweatshirt in terry fabric is a go to piece for a relaxed and effortless look - Keep it simple and layer this over a t-shirt and a pair of jeans",
+    image: "/Formal/casual4.jpg",
+    price: "799",
+    category: "casual",
+  },
+  {
+    id: 226,
+    title:
+      "Dennis Lingo Men's Solid Slim Fit Cotton Casual Shirt with Spread Collar & Full Sleeves ",
+    desc: "This Casual Solid shirt has a Slim fit, Spread collar, full button Placket, Full Sleeves, and a curved hemline Size and Fit Slim Fit The Model (height 6 foot and shoulders 18 inches is wearing size 40/M Please check the size chart for more details before ordering Material & Care 100% Premium Cotton (Machine Wash Regular) Style Tip Enhance your look by wearing this Casual Stylish Men's shirt, Team it with a pair of Chinos or Tapered Denim and Sneakers for a fun Smart Casual look About the Brand DENNIS LINGO Finding Basic Menswear for daily use can be hard among todays Fast fashion world, where trends change daily. That’s why we started Dennis Lingo, to create a one stop shop for premium essential clothing for everyday use at lowest prices",
+    image: "/Formal/casual5.jpg",
+    price: "499",
+    category: "casual",
+  },
+  {
+    id: 227,
+    title: "Men's Collared Button Up Shirt for Casual Wear",
+    desc: " Sutra shirts for men are comfortable to wear as the fabrics are light on the skin. Using stellar quality solvents, the shirts are made for your daily schedule. Whether you are dressing up for a date or going to work, shirts are designed keeping in mind the latest trends in contemporary casual fashion. The shirts combine style with the latest fashion and make you stand out among others.",
+    image: "/Formal/casual6.jpg",
+    price: "639",
+    category: "casual",
+  },
+  {
+    id: 228,
+    title: "Janasya Women's Black Cotton Striped Midi Dress",
+    desc: "Premium Collection by Janasya. Show off that elegant style of yours by wearing this striped dress by janasya. Made with premium quality cotton, this princess cut V-neckline dress has that old world charm in it which is enhanced by frills on hemline. The best part is it comes with a conceled pocket on side. Pair this dress with sandals.",
+    image: "/Formal/casual7.jpg",
+    price: "719",
+    category: "casual",
+  },
+  {
+    id: 229,
+    title:
+      "Fashion2wear Women's Georgette Casual Floral Digital Print Half Sleeve Knee Length Fit & Flare Long Maxi Gown Dress",
+    desc: " Navigate the extensive Gown category effortlessly with filters that allow customers to search based on specific occasions such as weddings, red carpet events, or proms.",
+    image: "/Formal/casual8.jpg",
+    price: "649",
+    category: "casual",
+  },
+  {
+    id: 26,
+    title: "DOCTOR EXTRA SOFT Doctor Ortho Slippers for Women.",
+    desc: "Extra Soft, Padded, Comfortable and Cushioned Foot-Bed Enhances Comfort to The Feet. Doctor Extra Soft Slipper Provides You Better Walking Comfort and Also Makes Your Walking Life Easy and Effortlessly",
+    image: "/Seller/seller6.jpg",
+    price: "399",
+  },
+  {
+    id: 27,
+    title: "ANNI DESIGNER Women Cotton Blend Kurta Set With Dupatta",
+    desc: "ANNI DESIGNER Women's Cotton Blend Straight Printed Kurta with Pant & Dupatta (Mang Pink_L_Pink_Large)",
+    image: "/Seller/seller7.jpg",
+    price: "679",
+  },
+  {
+    id: 28,
+    title: "ONLY Women Sweatshirt",
+    desc: "Fabric Composition :: 100% Cotton , Wash Care :: Machine wash,wash light colours separate , Length :: Long",
+    image: "/Seller/seller8.jpg",
+    price: "979",
+  },
+  {
+    id: 29,
+    title:
+      "Dr.Ortho Orthopedic Slippers | Acupressure Slippers | Flip-Flops | For Men & Women's Slippers",
+    desc: "Effective Pain Relief Dr. Ortho Acupressure Slippers employ the science of acupressure to bring a healthy dose of walking experience into our everyday lives. With regular wear of a minimum of 30 minutes, these orthopaedic slippers can help improve our blood circulation.",
+    image: "/Seller/seller9.jpg",
+    price: "395",
+  },
+  {
+    id: 30,
+    title:
+      "Logitech B170 Wireless Mouse, 2.4 GHz with USB Nano Receiver, Optical Tracking, 12-Months Battery Life, Ambidextrous, PC/Mac/Laptop - Black",
+    desc: "Reliable Wireless Connection : Enjoy a wireless connection up to 10m away thanks to a plug-and-forget USB mini-receiver, Optical Tracking : The advanced optical tracking features enable ultra precise moves on almost any surface. Required: available USB port, Windows 7, 8, 10 or later, macOS 10.5 or later, Chrome OS, Linux Kernel 2.6+",
+    image: "/Seller/seller10.jpg",
+    price: "499",
+  },
+  {
+    id: 31,
+    title:
+      "Symbol Men's Cotton Rich Solid Polo T-Shirt Regular Fit (Available in Plus Size)",
+    desc: " Symbol is built on the pillars of quality, reliability and affordability to offer you lifestyle essentials that never go out of fashion. Never out of style, this Symbol classic polo features contrast inner placket as an accent detail. Styled from breathable pique cotton, this polo is cut in an easy regular fit with ribbed collar & sleeves to provide a better grip and high-low hem for extra comfort. Wear it alone or under a jacket to make this collar polo look great.",
+    image: "/Seller/seller11.jpg",
+    price: "399",
+  },
+  {
+    id: 230,
+    title: "Leriya Fashion Women Regular Fit Crepe Top",
+    desc: "We are offers all kinds of tops for both women and girls - tops for women under 500, tops for girls new fashion western, women tops, top for girls, top for women western wear, tops for women casual, top for womens new style, top girls stylish fashion, tops for women western. Top Style: Colour blocked top with ruffles on bodice and ruffled bell sleeves. Fabric Style: Slab Cotton fabric.",
+    image: "/Formal/casual9.jpg",
+    price: "399",
+    category: "casual",
+  },
+  {
+    id: 231,
+    title:
+      "G Look Ediko Cap for Men & Women | Casual Wear Baseball Cap for Adults",
+    desc: "Great Material, Extra Wide Brim For Maximum Protection From Sun. This Cap Built For Sports Activities, Casual Wear, Outdoor, Indoor. With Adjustable Slide Closure.The Adjustable Slide Closure At The Back Of The Cap Adjust According To Your Head Sizes.Great Choice For Regular Uses.",
+    image: "/Formal/casual10.jpg",
+    price: "199",
+    category: "casual",
+  },
+  {
+    id: 232,
+    title: "SWizara Men's Vegan Leather Belt for Stylish Formal & Casual Wear",
+    desc: "With the Wizara Men's Vegan Leather Belt, experience unmatched style and sustainability. This 40mm wide piece of jewellery is a statement in ethical fashion, fusing contemporary sustainability with classic elegance. The buckle made of rust-proof zinc alloy adds style while guaranteeing long-lasting durability. It provides the ideal balance of comfort and style and is made to fit waists up to forty inches.",
+    image: "/Formal/casual11.jpg",
+    price: "349",
+    category: "casual",
+  },
+  {
+    id: 233,
+    title: "Men SM-162 Casual Shoes",
+    desc: "spectacular range of footwear from the house of Relaxo Footwears Ltd., a name trusted among millions of people in India and across the world for delivering unmatched quality. Since its inception, the company has established a benchmark for bringing the finest range of footwears. Sparx, the most stylish range of shoes, sandals and slippers are exclusively designed to match the latest trends of the new generation. Known for its sturdy and stylish designs, Sparx is an iconic youth brand for those who dare to explore the world. A perfect combination of comfort, style, and workmanship, Sparx is all about confidence and making a fashion statement. Its flaunting design pattern sparks a cool statement as you take a step ahead in them.",
+    image: "/Formal/casual12.jpg",
+    price: "769",
+    category: "casual",
+  },
+
+  {
+    id: 234,
+    title:
+      "Bacca Bucci Men's BTS Low Top Flat Sole Casual Sneakers for Men-All Day Wear",
+    desc: " Let your feet go on an all-inclusive holiday with surreal colours & Low Top Shorts Sneakers and dual tone color that let your youthful optimism shine.",
+    image: "/Formal/casual13.jpg",
+    price: "1299",
+    category: "casual",
+  },
+
+  {
+    id: 235,
+    title: " Symbol Women's Cotton Bodycon Midi Dress",
+    desc: "Start every outfit with Symbol's elevated wardrobe basics that are versatile, stylish and compliment your everyday look. This bodycon midi dress is crafted in stretchable knit fabric with 5% lycra and a silken finish for added comfort and soft handfeel. It features a wide round neck and full sleeves and is tailored to hug your curves. Dress it up with a pair of sandals or keep it casual in sneakers.",
+    image: "/Formal/casual14.jpg",
+    price: "549",
+    category: "casual",
+  },
+
+  {
+    id: 236,
+    title:
+      "Women Trendy High Neck Top Half Sleeves Crop Top for Women Formal, Casual, Office, Party Top",
+    desc: "Make a statement with this knit top featuring a high neckline, half sleeves, and a crop straight closure at the hem. This casual yet chic top would look perfect paired with a denim mini skirt, round sunglasses, and ankle booties.",
+    image: "/Formal/casual15.jpg",
+    price: "349",
+    category: "casual",
+  },
+  {
+    id: 111,
+    title:
+      "Symbol Premium Men's Wrinkle-Resistant Regular Fit Cotton Formal Shirt",
+    desc: "These formal shirts are made out of 100% double ply premium cotton fabric with liquid ammonia and moisture cure treatment that will resist wrinkles, add lustre and make the fabric breathable. The superlative craftsmanship with semi-cutaway collar, French placket, shanked and wrapped buttons, removable collar bones, and high quality interlinings would add on to the finesse of the garment. You may pair it up with a formal trouser and a blazer for a sharp formal look….. or roll up the sleeves and wear it with a chino or a clean Jeans for that smart casual occasion.",
+    image: "/Casual/formal1.png",
+    price: "1499",
+    category: "formal",
+  },
+  {
+    id: 112,
+    title: "Symbol Men's Regular Fit Formal Shirt",
+    desc: "An Amazon brand, Symbol is built on the pillars of quality, reliability and affordability, offering a range of lifestyle essentials that help you look good every day. This classic formal shirt is crafted with precision in cotton blend and two tone Fil a Fil fabric, to offer enhanced comfort and style, all at a great value. This shirt comes in a combo pack of 2 and is available in a range of colors to choose for any formal to a semi formal ocassion. To complete the look, pair it with an elegant solid formal trouser and brown leather shoes for a lasting impression. Now, look good every day with Symbol fashion essentials.",
+    image: "/Casual/formal2.webp",
+    price: "549",
+    category: "formal",
+  },
+  {
+    id: 113,
+    title: "FABRICALLY Men Regular Fit Solid Spread Collar Casual Shirt",
+    desc: "Elevate your formal wardrobe with our impeccably crafted men's regular-fit shirt. Tailored from high-quality cotton, this black and brown formal shirt for men exudes sophistication and style. Experience comfort and elegance without breaking the bank all our formal shirts are priced under 500. Make a statement on any occasion with the timeless appeal of our sky-blue shirt for men. Upgrade your ensemble with this versatile and affordable collection of formal shirts, designed to meet your every style need.",
+    image: "/Casual/formal3.webp",
+    price: "473",
+    category: "formal",
+  },
+  {
+    id: 114,
+    title: "Style Quotient Women Solid PolyMoss Regular Formal Shirt",
+    desc: "ACCENTUATE YOUR LOOK WEARING THIS CHIC AND STYLISH SOLID SHIRT FEATURING A MANDARIN COLLAR AND THREE-QUARTER PUFF SLEEVES. PAIR THIS SHIRT WITH BEIGE TROUSERS AND HEELS TO HAVE A COMPLETE LOOK.",
+    image: "/Casual/formal4.webp",
+    price: "489",
+    category: "formal",
+  },
+  {
+    id: 115,
+    title:
+      "UptoDate Mens Classic Polycotton Formal Trouser for Men Business Office Wear Pants",
+    desc: "Elevate your professional wardrobe with our Classic Polycotton Formal Trouser for Men. Crafted with a premium polycotton blend, these trousers provide exceptional comfort and durability, allowing you to stay focused on your day without sacrificing style. The timeless design exudes sophistication, making it an ideal choice for formal gatherings and office settings. Our trousers are available in a range of sizes to ensure a perfect fit for every body type. The wrinkle-resistant fabric ensures easy maintenance, giving you a polished appearance all day long. From important board meetings to after-work social events, our versatile trousers are designed to make you look and feel your best, no matter the occasion.",
+    image: "/Casual/formal5.webp",
+    price: "499",
+    category: "formal",
+  },
+  {
+    id: 116,
+    title: "U-TURN Men's Cotton Solid Formal/Semi Formal Shirt",
+    desc: "This Formal shirt offers a professional look for the true business man. It's the perfect day-to-night shirt. Wear it with some slacks to the office and throw on some jeans at night for drinks with the guys. Whatever the occasion this shirt will be your go-to. The style you want and the feel you need all rolled into this shirt. Please check the size chart for more details before ordering Material & Care100% Premium Cotton (Machine Wash Regular)Style Tip Enhance your look by wearing this trendy shirt. Team it with a pair of Chinos and white sneakers for a fun Smart Casual look About the Brand indoPrimo Finding Basic Menswear for daily use can be hard among todays Fast fashion world, where trends change daily. That's why we started IndoPrimo, to create a one stop shop for premium essential clothing for everyday use at rock bottom prices",
+    image: "/Casual/formal6.webp",
+    price: "378",
+    category: "formal",
+  },
+  {
+    id: 341,
+    title:
+      "9times Mens Blazers Black Coat Sports Jacket for Business Casual Formal Party Wedding Office Wear",
+    desc: "Men's black blazer, a versatile and timeless wardrobe essential. A classic black coat that exudes sophistication and style.",
+    image: "/Party/party6.webp",
+    price: "2299",
+    category: "party",
+  },
+
+  {
+    id: 342,
+    title: "FAVOROSKI Men Waistcoat",
+    desc: "SIZE GUIDE : Waist coat/Blazer size should be six Inch Over Your Jeans Waist Size (For Eg : If you Wear a thirty size Jeans your Waist coat size should be thirty six)",
+    image: "/Party/party7.webp",
+    price: "1199",
+    category: "party",
+  },
+  {
+    id: 343,
+    title: "IndoPrimo Men's Regular Fit Casual Shirt",
+    desc: "Slim Fit , Fabric: 100% Cotton , Full Sleeve ,Casual Shirts; High Quality Fabric and Stitching",
+    image: "/Party/party8.webp",
+    price: "476",
+    category: "party",
+  },
+
+  {
+    id: 344,
+    title:
+      "BULLMER Black Trendy Front and Back Printed Oversized Round Neck T-Shirt for Men",
+    desc: "BULLMER Printed Round Neck Oversized T-shirts is the perfect choice for Men . BULLMER premium quality cotton blended Tshirts makes you feel easier , Best Value , Superior Quality , Comfort Fit , Stretchable , Comfort Wear , Stylish Look . Amazing Bullmer designer collections makes your look smarter.",
+    image: "/Seller/seller15.jpg",
+    price: "298",
+    category: "party",
+  },
+  {
+    id: 345,
+    title:
+      "Lymio Men Cargo || Men Cargo Pants || Men Cargo Pants Cotton || Cargos for Men (Cargo-01-04)",
+    desc: "Men Cargo || Men Cargo Pants || Men Cargo Pants Cotton || Cargos for Men",
+    image: "/Seller/seller2.jpg",
+    price: "649",
+    category: "party",
+  },
+  {
+    id: 346,
+    title: "Allen Solly Men's Regular Fit Polo",
+    desc: "Ace weekend dressing in this blue solid Polo Neck T-shirt from Allen Solly by Allen Solly.Manufacturer : Aditya Birla Fashion and Retail Limited",
+    image: "/Seller/seller3.jpg",
+    price: "699",
+    category: "party",
+  },
+  {
+    id: 347,
+    title:
+      "Lymio Casual Shirt for Men|| Shirt for Men|| Men Stylish Shirt (D-Crush-16-23)",
+    desc: "Casual Shirt for Men|| Shirt for Men|| Men Stylish Shirt",
+    image: "/Seller/seller4.jpg",
+    price: "379",
+    category: "party",
+  },
+  {
+    id: 348,
+    title: "Adidas Men's Clinch-X M Running Shoe",
+    desc: "Mesh upper for lightweight and breathability ;These are Men Running Shoes ;Brand: Adidas ;Midsole: lightstrike IMEVA midsole with visible adiprene providing protection from harmful impact forces.",
+    image: "/Seller/seller5.jpg",
+    price: "1099",
+    category: "party",
+  },
+  {
+    id: 349,
+    title: "DOCTOR EXTRA SOFT Doctor Ortho Slippers for Women.",
+    desc: "Extra Soft, Padded, Comfortable and Cushioned Foot-Bed Enhances Comfort to The Feet. Doctor Extra Soft Slipper Provides You Better Walking Comfort and Also Makes Your Walking Life Easy and Effortlessly",
+    image: "/Seller/seller6.jpg",
+    price: "399",
+    category: "party",
+  },
+  {
+    id: 350,
+    title: "ANNI DESIGNER Women Cotton Blend Kurta Set With Dupatta",
+    desc: "ANNI DESIGNER Women's Cotton Blend Straight Printed Kurta with Pant & Dupatta (Mang Pink_L_Pink_Large)",
+    image: "/Seller/seller7.jpg",
+    price: "679",
+    category: "party",
+  },
+  {
+    id: 117,
+    title:
+      "IndoPrimo Formal Shirt for Men || Shirt for Men || Men Stylish Shirt || Men Plain Shirt || Men Solid Shirt",
+    desc: "This Formal shirt offers a professional look for the true business man. It's the perfect day-to-night shirt. Wear it with some slacks to the office and throw on some jeans at night for drinks with the guys. Whatever the occasion this shirt will be your go-to. The style you want and the feel you need all rolled into this shirt. Please check the size chart for more details before ordering Material & Care100% Premium Cotton (Machine Wash Regular)Style Tip Enhance your look by wearing this trendy shirt. Team it with a pair of Chinos and white sneakers for a fun Smart Casual look About the Brand indoPrimo Finding Basic Menswear for daily use can be hard among todays Fast fashion world, where trends change daily. That's why we started IndoPrimo, to create a one stop shop for premium essential clothing for everyday use at rock bottom prices",
+    image: "/Casual/formal7.webp",
+    price: "444",
+    category: "formal",
+  },
+  {
+    id: 118,
+    title: "CINDERS Women Regular Fit Formal Blazer",
+    desc: "CINDERS Formal Daily Wear blazer is made of Best-quality fabric which is soft, breathable, and comfortable, also it is popular for women's blazers. It is also versatile and easy to care for, making it a popular choice for everyday wear.",
+    image: "/Casual/formal8.webp",
+    price: "1499",
+    category: "formal",
+  },
+  {
+    id: 119,
+    title: "Ryko Formal Shoes for Men Classic Style Shoes(Black)",
+    desc: "The style, design, and all the features make this pair of shoes apt for travel. It keeps your feet comfy from inside so you could put them on for endless hours.",
+    image: "/Casual/formal9.webp",
+    price: "549",
+    category: "formal",
+  },
+  {
+    id: 120,
+    title: "Prolific Men's Formal Drving Loafer (Size UK 6-13) Brown",
+    desc: "Now showcase your gentility with perfection with this amazing pair of formal shoes for men by the named and famed hub of Prolific. With high end decent color, these formal shoes are a must have for every urban man. Crafted from premium quality 100% vegan leather and quality sole, these are comfortable and slip resistant and are bound to stay with you for quite a long time and also assures perfect business class experience. This shoe is crafted with the aid of experienced and skilled designers & craftsmen, who have a deep sense of latest fashion trends. The flawless make and light weight of footwear makes it easy for the wearer to maintain right posture and balance..",
+    image: "/Casual/formal10.webp",
+    price: "898",
+    category: "formal",
+  },
+
+  {
+    id: 32,
+    title:
+      "Leriya Fashion Ethnic Co Ord Set | Casual Wear Pant Top Set | Fancy Co-Ord Set | Full Pair Set | Women Kurta Sets Kurtis | Women Kurta Pant Set | Coord Sets for Women",
+    desc: "Package Content:- 1* Top & 1* Wide Leg Pant Sets || Neck:- Collared neck || Sleeve:- Long Sleeve || Two Piece Nightwear: Long Printed Top + Pyjama (Pajama Sets for Women)",
+    image: "/Seller/seller12.jpg",
+    price: "529",
+  },
+  {
+    id: 333,
+    title:
+      "London Hills Solid Men's Round Neck Cotton Blend Half Sleeve T-Shirts",
+    desc: "London Hills Solid Men's Round Neck Cotton Blend Half Sleeve T-Shirts",
+    image: "/Seller/seller14.jpg",
+    price: "199",
+    category: "party",
+  },
+  {
+    id: 334,
+    title:
+      "Studio Shringaar Men's 100% Pure Cotton Wine Block Printed Knee Length Kurta",
+    desc: "We at Studio Shringaar have been making and exporting men's kurtas for the past 30 years. This years of experience, we have achieved expertise in making kurtas for Indian men of all shapes and sizes. We follow strict quality control and believe in using the best available fabrics and other raw materials to make our kurtas. A kurta is an integral part of the Indian man's attire nowadays.",
+    image: "/Party/party10.webp",
+    price: "811",
+    category: "party",
+  },
+  {
+    id: 335,
+    title: "MANQ Men's Slim Fit Single Breasted Blazer",
+    desc: "Shop from a wide range of Blazer from MANQ. Perfect for office meetings and parties, you could pair it with a stylish shirt to complete the look.",
+    image: "/Party/party9.webp",
+    price: "2327",
+    category: "party",
+  },
+  {
+    id: 336,
+    title: "Bollyclues Women's Net Embroidered Semi-Stitched Lehenga Choli",
+    desc: "Fabric: 80% Net, 20% Polyester, Closure Type: Drawstring , Sleeve Type: Full Sleeve",
+    image: "/Party/party1.webp",
+    price: "899",
+    category: "party",
+  },
+  {
+    id: 337,
+    title:
+      "C J Enterprise Women's Pure Kanjivaram Soft Silk Saree for Wedding With Blouse Piece",
+    desc: "We present variety of sarees like kanchipuramsilk sarees, kanjeevaramsilk sarees, banarasisilk sarees KanchivaramSilk paithaniSilk etc.",
+    image: "/Party/party2.webp",
+    price: "681",
+    category: "party",
+  },
+  {
+    id: 338,
+    title:
+      "Pratham Blue Women's Sequins Georgette Fancy Saree With Blouse Piece",
+    desc: "Saree Details : Saree Material- Georgette, Saree Length- 6.3 m, Saree Work Type- Sequins Embroidery Lace Work.",
+    image: "/Party/party3.webp",
+    price: "839",
+    category: "party",
+  },
+  {
+    id: 339,
+    title: "madhuram textiles Women Rayon A-Line Long Kurti",
+    desc: "Occasion Type: Casual; Item Length Description: Ankle-Length; Age Range Description: Adult",
+    image: "/Party/party4.webp",
+    price: "999",
+    category: "party",
+  },
+  {
+    id: 340,
+    title: "CK Fashion Men's Waistcoat Slim Fit Dress Vest Wedding Waistcoat",
+    desc: "Fashion quality Vest can make you out of ordinary, It is the prefer choice for most customers as a gift, buy it for Father's Day, Christmas Day, Independence Day, April Fool, anniversary, New Year's Day, Valentine's Day, Thanksgiving Day, May Day, Easter Sunday, etc. Classical style for all occasion: Daily Dress, Birthday, Wedding, Engagement, Party, Business, Office, Meeting, Gifts for Men.Perfect for your everyday use, you could pair it with a stylish t-shirt or shirt complete the look.",
+    image: "/Party/party5.webp",
+    price: "790",
+    category: "party",
+  },
+  {
+    id: 33,
+    title: "VERO MODA Women's Cotton Round Neck Sweatshirt",
+    desc: "Vero Moda Women Cotton%100 Printed Yellow Regular Fit Sweatshirt",
+    image: "/Seller/seller13.jpg",
+    price: "1225",
+  },
+  {
+    id: 34,
+    title:
+      "London Hills Solid Men's Round Neck Cotton Blend Half Sleeve T-Shirts",
+    desc: "London Hills Solid Men's Round Neck Cotton Blend Half Sleeve T-Shirts",
+    image: "/Seller/seller14.jpg",
+    price: "199",
+  },
+  {
+    id: 35,
+    title:
+      "BULLMER Black Trendy Front and Back Printed Oversized Round Neck T-Shirt for Men",
+    desc: "BULLMER Printed Round Neck Oversized T-shirts is the perfect choice for Men . BULLMER premium quality cotton blended Tshirts makes you feel easier , Best Value , Superior Quality , Comfort Fit , Stretchable , Comfort Wear , Stylish Look . Amazing Bullmer designer collections makes your look smarter.",
+    image: "/Seller/seller15.jpg",
+    price: "298",
+  },
+  {
+    id: 121,
+    title: "Symbol Men's Slim Dress Pants",
+    desc: "Our range of formal trousers are designed keeping you in mind. With fits and styling that will make you stand apart and prices that will give you great value for your money, symbol formal trousers are simply impossible to say no to.",
+    image: "/Casual/formal11.webp",
+    price: "899",
+    category: "formal",
+  },
+  {
+    id: 444,
+    title:
+      "3Colours RGB Men's Active Wear Sleeveless Tank top, Gym Vest, Leisure wear -Spark CCUT",
+    desc: "The Light Speed workout sleeveless t-shirts for men from 3ColoursRGB are a great choice for anyone looking for comfortable, high-performance gym wear. These tank tops are made from a soft, breathable, and stretchy fabric that provides maximum comfort during intense workouts, allowing you to move freely and keep your body cool and dry. ",
+    image: "/Gym/gym1.webp",
+    price: "349",
+    category: "gym",
+  },
+  {
+    id: 122,
+    title: "SIRIL Women's Polyester Blend Woven Formal Top",
+    desc: "Fabric : Polyester Blend || Inner Fabric : N/A , Style: Formal Full Sleeve Shirt || Work: Woven",
+    image: "/Casual/formal12.webp",
+    price: "399",
+    category: "formal",
+  },
+
+  {
+    id: 123,
+    title: "Style Quotient Women Solid Beige Regular Formal Shirt",
+    desc: "Pattern Type : Solid , Sleeve Length : Long Sleeves",
+    image: "/Casual/formal13.webp",
+    price: "529",
+    category: "formal",
+  },
+
+  {
+    id: 124,
+    title: "Style Quotient Women Solid Polycotton Regular Formal Shirt",
+    desc: "CLASSIC SOLID FORMAL SHIRT WITH SPREAD COLLAR AND FULL SLEEVE TO ADD TO YOUR BACK-TO-WORK WARDROBE. PAIR IT WITH TIGHT FIT PANTS AND YOU'RE GOOD TO GO.",
+    image: "/Casual/formal14.webp",
+    price: "479",
+    category: "formal",
+  },
+
+  {
+    id: 125,
+    title: "Style Quotient Women Shirt",
+    desc: "This shirt is made with high-quality, lightweight fabric, it features a classic spread collar and a button-down placket that gives it a chic and sophisticated look. The full sleeves with cuffs add an element of elegance to the shirt, making it perfect for both casual and formal occasions. The curved bottom hemline adds a touch of femininity and enhances the shirt's overall aesthetic appeal. The red and white stripe pattern is timeless and can be easily paired with a variety of different bottoms, including jeans, skirts, and shorts. The shirt's loose fit makes it comfortable to wear all day long, while the structured design ensures that it maintains its shape and style.",
+    image: "/Casual/formal15.webp",
+    price: "579",
+    category: "formal",
+  },
+  {
+    id: 445,
+    title:
+      "Gym Stringer Vest, Gym Vest, Racer Y Back, Sports Tank Tops, Sando for Men, Gymvest1",
+    desc: "Fitness apparel is inspired by fitness enthusiasts, bodybuilders, and athletes. The clothing range is specially tailored for active men who settle for nothing less than high-quality and high-performance apparel. These dynamic clothing are proactive, fashionable and add class to the workout session. Whether you are training for a competition, your first bodybuilding show, or just want to look great on the beach, these tank tops will bring out the best of your physique.",
+    image: "/Gym/gym2.webp",
+    price: "280",
+    category: "gym",
+  },
+
+  {
+    id: 446,
+    title:
+      "Boldfit Vest for Men Multipurpose Sando for Men for use in Gym, Running",
+    desc: "SLEVELESS UNDERSHIRT: Boldfit adopts a sleeveless design, fits the body and allows you to move freely, which can provide you with comfortable feeling exercise.",
+    image: "/Gym/gym3.webp",
+    price: "299",
+    category: "gym",
+  },
+  {
+    id: 447,
+    title:
+      "Boldfit Sports T Shirt for Men Quick Dry Fit Tshirt for Men Gym T Shirts for Men for Casual Wear Workout",
+    desc: "PREMIUM POLY-SPANDEX BLEND: Our running tee shirt is crafted from a high-quality blend of polyester and spandex, offering a perfect balance of durability, flexibility, and moisture-wicking properties. ",
+    image: "/Gym/gym4.webp",
+    price: "699",
+    category: "gym",
+  },
+  {
+    id: 448,
+    title: "ENDEAVOUR WEAR Men's Regular Fit Trackpants",
+    desc: "Shop from a wide range of Joggers from ENDEAVOUR WEAR. Perfect for your everyday use, you could pair it with a stylish t-shirt or shirt to complete the look.",
+    image: "/Gym/gym5.webp",
+    price: "498",
+    category: "gym",
+  },
+  {
+    id: 449,
+    title:
+      "JUST RIDER 2 in 1 Running Sports Shorts for Men with Mobile Phone Pocket Light Weight Quick Dry Fabric for Gym",
+    desc: "STRETCH COMFORT, LIGHTWEIGHT SUPPORT The upgraded technical fabric has a light, breathable and soft feel, which is more comfortable and free to move.",
+    image: "/Gym/gym6.webp",
+    price: "472",
+    category: "gym",
+  },
+  {
+    id: 450,
+    title:
+      "FUAARK Men's Round Neck Slim fit Gym & Active wear Sports T-Shirt for Workout & Casual Wear",
+    desc: "Durable and comfortable — ideal for workouts, Fuaark Print on Chest, Raglan sleeves for those traps, Fuaark Dry for sweat wicking",
+    image: "/Gym/gym7.webp",
+    price: "599",
+    category: "gym",
+  },
+  {
+    id: 451,
+    title:
+      "JUST RIDER Compression t Shirts for Men Men's Full Sleeve Compression Shirt",
+    desc: "HIGH-PERFORMANCE COMPRESSION: Look and feel your best as this mens compression shirt supports your muscles, improves circulation, wicks away sweat and helps regulate body temperature. Whether worn as lightweight activewear or as a base layer, this fitted breathable t-shirt delivers the support you need on the basketball court, football field, hiking trail, dance floor or golf course. Run that 5K or marathon or exercise at the gym with less risk of rash, overheating or muscle fatigue.",
+    image: "/Gym/gym8.webp",
+    price: "474",
+    category: "gym",
+  },
+
+  {
+    id: 452,
+    title:
+      "BOLDFIT Gym Wear for Women Stretchable Yoga Pants for Women Fitness Gym Leggings",
+    desc: "BREATHABLE & STRETCHY - Boldfit leggings for women are made of ultra-lightweight and moderate compression fabric, Buttery-soft, Sweat-wicking, non see through, Non-frizzly. Jeggings for women stretchable has a second-skin fit and feel that sculpts and smooths like no other.",
+    image: "/Gym/gym9.webp",
+    price: "399",
+    category: "gym",
+  },
+  {
+    id: 455,
+    title:
+      "London Hills Women Sports Zipper Running Summer Track Suit for Women | Sports TrackSuit for Women",
+    desc: "This pair of Sports Jacket and Lowers, (track suit) is fabricated French Terry with 60% Cotton & 40% Polyester fabric and it is designed by using the ultra -soft and stretchable material which will provide you no difficulty in wearing it",
+    image: "/Gym/gym12.webp",
+    price: "999",
+    category: "gym",
+  },
+  {
+    id: 456,
+    title:
+      "FLINGR Women's Round Neck Full Sleeves T-Shirt for Gym, Sports, Yoga, Workout",
+    desc: "Best multi sports inner wear used for swimming, basketball, cricket, hockey, badminton, tennis, squash, yoga volleyball, baseball, basketball, gym, exercise and fitness, running, camping and hiking, cycling or any outdoor activity",
+    image: "/Gym/gym13.webp",
+    price: "314",
+    category: "gym",
+  },
+  {
+    id: 457,
+    title: "CHKOKKO Women's Sports Vest",
+    desc: "Round neck, sleeveless, and fabricated with 88% Polyester and 12% Lycra. This flawless tank top with comfort and good style can be paired well with any decent ankle-length leggings.",
+    image: "/Gym/gym14.webp",
+    price: "299",
+    category: "gym",
+  },
+  {
+    id: 458,
+    title:
+      "Clovia Women's Comfort-Fit Active Text Print T-Shirt with Reflective Sticker",
+    desc: "Product Type: Sport T-shirt , Fabric: Polyester , Sleeve: Short Sleeve , Neck: Round Neck , Sport Activity: Perfect For Zumba, Dance, Yoga And Running,Gym.",
+    image: "/Gym/gym15.webp",
+    price: "540",
+    category: "gym",
+  },
+];
+
+export default ShopData;
