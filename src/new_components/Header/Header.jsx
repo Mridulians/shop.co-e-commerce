@@ -1,11 +1,12 @@
 import "./Header.css";
 import Name from "../../ASSETS_NEW/Name.png";
 import Cart from "../../ASSETS_NEW/Cart.png";
-import Account from "../../ASSETS_NEW/Account.png";
+// import Account from "../../ASSETS_NEW/Account.png";
 import { FaSearch } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Mridul from "./Mridul";
+import Flag from "../../ASSETS_NEW/flag.png";
 
 const Header = () => {
   const products = useSelector((state) => state.cart);
@@ -53,8 +54,8 @@ const Header = () => {
             <sub>{products.length}</sub>
           </Link>
 
-          <Link to="/account">
-            <img src={Account} alt="" />
+          <Link to="">
+            <img src={Flag} alt="" style={{ width: "2rem", height: "2rem" }} />
           </Link>
         </div>
       </div>
