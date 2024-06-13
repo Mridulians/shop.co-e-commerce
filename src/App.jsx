@@ -26,6 +26,7 @@ import Order from "./new_components/FinalOrder/Order";
 import ShopData from "./new_components/Shop/ShopData";
 import BrandData from "./new_components/Brands/BrandData";
 import DesktopSearch from "./new_components/Search/DesktopSearch";
+import Address from "./new_components/Address/Address";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/address" element={<Address />} />
         <Route path="/order" element={<Order />} />
         <Route path="/ds" element={<DesktopSearch />} />
         <Route path="/shop" element={<Shop />} />

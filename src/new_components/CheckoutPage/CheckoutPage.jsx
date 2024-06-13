@@ -54,8 +54,8 @@ const CheckoutPage = () => {
 
   console.log(finalPrice);
 
-  const handleOrder = () => {
-    navigate("/order");
+  const handleAddress = () => {
+    navigate("/address");
   };
 
   // Function to check if a payment method is selected
@@ -121,8 +121,8 @@ const CheckoutPage = () => {
         />
       </div>
       <div className="orderNow">
-        <button onClick={handleOrder} disabled={!isPaymentSelected}>
-          Confirm Order
+        <button onClick={handleAddress} disabled={!isPaymentSelected}>
+          Add Address
         </button>
       </div>
     </>
