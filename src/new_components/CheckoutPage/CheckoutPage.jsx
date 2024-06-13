@@ -68,7 +68,9 @@ const CheckoutPage = () => {
           <h1>Select the Payment Method</h1>
           <div className="options">
             <div className="optionChoices">
-              <h2>Cash on Delivery</h2>
+              <h2 onClick={() => handlePaymentSelection("cashOnDelivery")}>
+                Cash on Delivery
+              </h2>
               <input
                 type="radio"
                 name="paymentMethod"
@@ -77,9 +79,13 @@ const CheckoutPage = () => {
                 onChange={() => handlePaymentSelection("cashOnDelivery")}
               />
             </div>
-            <div className="optionChoices">
-              <img src={Visa} alt="visa" />
-              <img src={Master} alt="master" />
+
+            <div
+              className="optionChoices"
+              onClick={() => handlePaymentSelection("visaMaster")}
+            >
+              <img className="w-[50px] h-[30px]" src={Visa} alt="visa" />
+              <img className="w-[50px] h-[30px]" src={Master} alt="master" />
               <input
                 type="radio"
                 name="paymentMethod"
@@ -88,9 +94,13 @@ const CheckoutPage = () => {
                 onChange={() => handlePaymentSelection("visaMaster")}
               />
             </div>
-            <div className="optionChoices">
-              <img src={Paypal} alt="paypal" />
-              <img src={Gpay} alt="Gpay" />
+
+            <div
+              className="optionChoices"
+              onClick={() => handlePaymentSelection("paypalGpay")}
+            >
+              <img className="w-[50px] h-[30px]" src={Paypal} alt="paypal" />
+              <img className="w-[50px] h-[30px]" src={Gpay} alt="Gpay" />
               <input
                 type="radio"
                 name="paymentMethod"
@@ -99,8 +109,11 @@ const CheckoutPage = () => {
                 onChange={() => handlePaymentSelection("paypalGpay")}
               />
             </div>
+
             <div className="optionChoices">
-              <h2>Emi or other options</h2>
+              <h2 onClick={() => handlePaymentSelection("emiOptions")}>
+                Emi or other options
+              </h2>
               <input
                 type="radio"
                 name="paymentMethod"

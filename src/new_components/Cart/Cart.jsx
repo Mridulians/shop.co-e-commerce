@@ -4,6 +4,7 @@ import { remove } from "../../Features/cartSlice";
 import "./Cart.css";
 import { useEffect } from "react";
 import Delete from "../../ASSETS_NEW/delete.png";
+import EmptyCart from "../../ASSETS_NEW/empty_cart.png";
 import Checkout from "./Checkout";
 
 const Cart = () => {
@@ -16,8 +17,8 @@ const Cart = () => {
 
   console.log(productCard);
 
-  const removeItem = (id) => {
-    dispatch(remove(id));
+  const removeItem = (uniqueId) => {
+    dispatch(remove(uniqueId));
   };
 
   const shortenTitle = (title, maxLength) => {
@@ -56,8 +57,8 @@ const Cart = () => {
           <h1 className="cartHeading">Your Shopping Bag</h1>
           <div className="completeCart">
             <div className="cartAllData">
-              {productCard.map((item, id) => (
-                <div className="new_card" key={id}>
+              {productCard.map((item) => (
+                <div className="new_card" key={item.uniqueId}>
                   <img src={item.image} alt="" className="card_img" />
                   <div className="card_content">
                     <div className="price_title">
@@ -71,7 +72,7 @@ const Cart = () => {
                       className="deleteBtn"
                       src={Delete}
                       alt="delete"
-                      onClick={() => removeItem(item.id)}
+                      onClick={() => removeItem(item.uniqueId)}
                     />
                   </div>
                 </div>
@@ -88,7 +89,10 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <h1 className="cart_mridul">Your Cart is Empty</h1>
+        <div className="pt-[5rem] flex flex-col justify-center items-center">
+          <img src={EmptyCart} alt="" />
+          <h2 className="text-[1.5rem] px-[1rem] sm:px-[0rem] font-bold sm:text-[2rem] font-sans text-center">Your Cart is Missing You 😔😔</h2>
+        </div>
       )}
     </>
   );
