@@ -27,15 +27,20 @@ const CheckoutPage = () => {
     setSelectedPayment(paymentMethod);
   };
 
-  const productCard = useSelector((state) => state.cart);
+  const productCard = useSelector((state) => state.cartreducer.carts);
 
   console.log(productCard);
 
-  // Function to get the total price
+  // Function to get the total price for each item
+  const getItemTotal = (item) => {
+    return parseFloat(item.price) * item.qnty;
+  };
+
+  // Function to get the total price of all items
   const getTotalPrice = (items) => {
     let totalPrice = 0;
     items.forEach((item) => {
-      totalPrice += parseFloat(item.price); // Convert price to a number before adding
+      totalPrice += getItemTotal(item);
     });
     return totalPrice;
   };

@@ -11,7 +11,7 @@ const Selling = () => {
   const data = [
     {
       img: Dress5,
-      name: "T-SHIRT WITH TAPE DETAILS",
+      name: "SHIRT WITH TAPE DETAILS",
       price: "120$",
       previousPrice: "",
       discount: "",
@@ -19,7 +19,7 @@ const Selling = () => {
     },
     {
       img: Dress6,
-      name: "SKINNY FIT JEANS",
+      name: "SKINNY FIT T-SHIRT",
       price: "240$",
       previousPrice: "260$",
       discount: "-20%",
@@ -27,7 +27,7 @@ const Selling = () => {
     },
     {
       img: Dress7,
-      name: "CHECKERED SHIRT",
+      name: "CHECKERED SHORTS",
       price: "180$",
       previousPrice: "",
       discount: "",
@@ -35,7 +35,7 @@ const Selling = () => {
     },
     {
       img: Dress8,
-      name: "SLEEVE STRIPED T-SHIRT",
+      name: "SLEEVE STRIPED JEANS",
       price: "130$",
       previousPrice: "160$",
       discount: "-30%",

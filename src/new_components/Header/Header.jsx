@@ -9,7 +9,9 @@ import Mridul from "./Mridul";
 import Flag from "../../ASSETS_NEW/flag.png";
 
 const Header = () => {
-  const products = useSelector((state) => state.cart);
+  // const products = useSelector((state) => state.cart);
+  const getData = useSelector((state) => state.cartreducer.carts);
+ console.log(getData)
 
   return (
     <>
@@ -51,7 +53,7 @@ const Header = () => {
         <div className="cart_logo">
           <Link to="/cart" style={{ display: "flex" }}>
             <img src={Cart} alt="" />
-            <sub>{products.length}</sub>
+            <sub>{getData.length}</sub>
           </Link>
 
           <Link to="">
@@ -113,7 +115,7 @@ const Header = () => {
           {/* <FaSearch className="mobileItems" /> */}
           <Link to="/cart" style={{ display: "flex" }}>
             <img src={Cart} alt="" />
-            <sub>{products.length}</sub>
+            <sub>{getData.length}</sub>
           </Link>
           <Link to="/search">
             {/* <img src={Account} alt="" /> */}

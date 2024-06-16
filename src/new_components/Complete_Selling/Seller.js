@@ -1,11 +1,57 @@
+import Dress5 from "../../ASSETS_NEW/dress5.png";
+import Dress6 from "../../ASSETS_NEW/dress6.png";
+import Dress7 from "../../ASSETS_NEW/dress7.png";
+import Dress8 from "../../ASSETS_NEW/dress8.png";
 
 const data = [
+  {
+    image: Dress5,
+    title: "SHIRT WITH TAPE DETAILS",
+    price: "120",
+    previousPrice: "",
+    discount: "",
+    id: 1111111,
+    qnty: 0,
+    desc: "This checked shirt are of multiple use and serve multiple designs because of its longitivity and elasticness , this shirt made of cotton and wool.  ",
+  },
+  {
+    image: Dress6,
+    title: "SKINNY FIT T-SHIRT",
+    price: "240",
+    previousPrice: "260$",
+    discount: "-20%",
+    id: 2222222,
+    qnty: 0,
+    desc: "Checked and skinny t-shirt are in great trend right now and everyone s wearing this. made from cotton and nylon , eco-friendly shirt with outmost fitness.",
+  },
+  {
+    image: Dress7,
+    title: "CHECKERED SHORTS",
+    price: "180",
+    previousPrice: "",
+    discount: "",
+    id: 3333333,
+    qnty: 0,
+    desc: "THis shorts is made from jeans fibre and size is comfortable to each and every body.",
+  },
+  {
+    image: Dress8,
+    title: "SLEEVE STRIPED JEANS",
+    price: "130",
+    previousPrice: "160$",
+    discount: "-30%",
+    id: 4444444,
+    qnty: 0,
+    desc: "A jeans black in color made from eco-friendly fibre , soft to skin , slim and fit to eery size is its best qualities.",
+  },
+
   {
     id: 21,
     title: "ANNI DESIGNER Women Kurta with Palazzo",
     desc: "ANNI DESIGNER Women's Cotton Blend Straight Printed Kurta with Palazzo (Chinki Green_L_Green_Large).This set includes: 1 Kurta with 1 Pant || Work : Printed || Neck Style:- Round Neck",
     image: "/Seller/seller1.jpg",
     price: "489",
+    qnty: 0,
   },
   {
     id: 22,
@@ -14,6 +60,7 @@ const data = [
     desc: "Men Cargo || Men Cargo Pants || Men Cargo Pants Cotton || Cargos for Men",
     image: "/Seller/seller2.jpg",
     price: "649",
+    qnty: 0,
   },
   {
     id: 23,
@@ -21,6 +68,7 @@ const data = [
     desc: "Ace weekend dressing in this blue solid Polo Neck T-shirt from Allen Solly by Allen Solly.Manufacturer : Aditya Birla Fashion and Retail Limited",
     image: "/Seller/seller3.jpg",
     price: "699",
+    qnty: 0,
   },
   {
     id: 24,
@@ -29,6 +77,7 @@ const data = [
     desc: "Casual Shirt for Men|| Shirt for Men|| Men Stylish Shirt",
     image: "/Seller/seller4.jpg",
     price: "379",
+    qnty: 0,
   },
   {
     id: 25,
@@ -36,6 +85,7 @@ const data = [
     desc: "Mesh upper for lightweight and breathability ;These are Men Running Shoes ;Brand: Adidas ;Midsole: lightstrike IMEVA midsole with visible adiprene providing protection from harmful impact forces.",
     image: "/Seller/seller5.jpg",
     price: "1099",
+    qnty: 0,
   },
   {
     id: 26,
@@ -43,6 +93,7 @@ const data = [
     desc: "Extra Soft, Padded, Comfortable and Cushioned Foot-Bed Enhances Comfort to The Feet. Doctor Extra Soft Slipper Provides You Better Walking Comfort and Also Makes Your Walking Life Easy and Effortlessly",
     image: "/Seller/seller6.jpg",
     price: "399",
+    qnty: 0,
   },
   {
     id: 27,
@@ -50,6 +101,7 @@ const data = [
     desc: "ANNI DESIGNER Women's Cotton Blend Straight Printed Kurta with Pant & Dupatta (Mang Pink_L_Pink_Large)",
     image: "/Seller/seller7.jpg",
     price: "679",
+    qnty: 0,
   },
   {
     id: 28,
@@ -57,6 +109,7 @@ const data = [
     desc: "Fabric Composition :: 100% Cotton , Wash Care :: Machine wash,wash light colours separate , Length :: Long",
     image: "/Seller/seller8.jpg",
     price: "979",
+    qnty: 0,
   },
   {
     id: 29,
@@ -65,6 +118,7 @@ const data = [
     desc: "Effective Pain Relief Dr. Ortho Acupressure Slippers employ the science of acupressure to bring a healthy dose of walking experience into our everyday lives. With regular wear of a minimum of 30 minutes, these orthopaedic slippers can help improve our blood circulation.",
     image: "/Seller/seller9.jpg",
     price: "395",
+    qnty: 0,
   },
   {
     id: 30,
@@ -73,6 +127,7 @@ const data = [
     desc: "Reliable Wireless Connection : Enjoy a wireless connection up to 10m away thanks to a plug-and-forget USB mini-receiver, Optical Tracking : The advanced optical tracking features enable ultra precise moves on almost any surface. Required: available USB port, Windows 7, 8, 10 or later, macOS 10.5 or later, Chrome OS, Linux Kernel 2.6+",
     image: "/Seller/seller10.jpg",
     price: "499",
+    qnty: 0,
   },
   {
     id: 31,
@@ -81,6 +136,7 @@ const data = [
     desc: " Symbol is built on the pillars of quality, reliability and affordability to offer you lifestyle essentials that never go out of fashion. Never out of style, this Symbol classic polo features contrast inner placket as an accent detail. Styled from breathable pique cotton, this polo is cut in an easy regular fit with ribbed collar & sleeves to provide a better grip and high-low hem for extra comfort. Wear it alone or under a jacket to make this collar polo look great.",
     image: "/Seller/seller11.jpg",
     price: "399",
+    qnty: 0,
   },
 
   {
@@ -90,6 +146,7 @@ const data = [
     desc: "Package Content:- 1* Top & 1* Wide Leg Pant Sets || Neck:- Collared neck || Sleeve:- Long Sleeve || Two Piece Nightwear: Long Printed Top + Pyjama (Pajama Sets for Women)",
     image: "/Seller/seller12.jpg",
     price: "529",
+    qnty: 0,
   },
   {
     id: 33,
@@ -97,6 +154,7 @@ const data = [
     desc: "Vero Moda Women Cotton%100 Printed Yellow Regular Fit Sweatshirt",
     image: "/Seller/seller13.jpg",
     price: "1225",
+    qnty: 0,
   },
   {
     id: 34,
@@ -105,6 +163,7 @@ const data = [
     desc: "London Hills Solid Men's Round Neck Cotton Blend Half Sleeve T-Shirts",
     image: "/Seller/seller14.jpg",
     price: "199",
+    qnty: 0,
   },
   {
     id: 35,
@@ -113,6 +172,7 @@ const data = [
     desc: "BULLMER Printed Round Neck Oversized T-shirts is the perfect choice for Men . BULLMER premium quality cotton blended Tshirts makes you feel easier , Best Value , Superior Quality , Comfort Fit , Stretchable , Comfort Wear , Stylish Look . Amazing Bullmer designer collections makes your look smarter.",
     image: "/Seller/seller15.jpg",
     price: "298",
+    qnty: 0,
   },
 ];
 

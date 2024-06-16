@@ -1,11 +1,13 @@
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { remove } from "../../Features/cartSlice";
+// import { remove } from "../../Features/cartSlice";
 import "./Cart.css";
 import { useEffect } from "react";
 import Delete from "../../ASSETS_NEW/delete.png";
 import EmptyCart from "../../ASSETS_NEW/empty_cart.png";
 import Checkout from "./Checkout";
+import {DLT} from '../../Reduxx/actions/action'
+
 
 const Cart = () => {
   useEffect(() => {
@@ -13,13 +15,14 @@ const Cart = () => {
   }, []);
 
   const dispatch = useDispatch();
-  const productCard = useSelector((state) => state.cart);
-
+  const productCard = useSelector((state) => state.cartreducer.carts);
+  
   console.log(productCard);
 
   const removeItem = (uniqueId) => {
-    dispatch(remove(uniqueId));
+    dispatch(DLT(uniqueId));
   };
+ 
 
   const shortenTitle = (title, maxLength) => {
     return title.length > maxLength
@@ -27,17 +30,22 @@ const Cart = () => {
       : title;
   };
 
-  // Function to get the total price
+  // Function to get the total price for each item
+  const getItemTotal = (item) => {
+    return parseFloat(item.price) * item.qnty;
+  };
+
+  // Function to get the total price of all items
   const getTotalPrice = (items) => {
     let totalPrice = 0;
     items.forEach((item) => {
-      totalPrice += parseFloat(item.price); // Convert price to a number before adding
+      totalPrice += getItemTotal(item);
     });
     return totalPrice;
   };
 
   const totalPrice = getTotalPrice(productCard).toFixed(2);
-  console.log(totalPrice); // Output the total price
+  // console.log(totalPrice); // Output the total price
 
   const discount = (totalPrice * 0.1).toFixed(2);
   const delivery = 50;
@@ -48,7 +56,8 @@ const Cart = () => {
     parseFloat(discount)
   ).toFixed(2);
 
-  console.log(finalPrice);
+  // console.log(finalPrice);
+
 
   return (
     <>
@@ -58,22 +67,30 @@ const Cart = () => {
           <div className="completeCart">
             <div className="cartAllData">
               {productCard.map((item) => (
-                <div className="new_card" key={item.uniqueId}>
+                <div className="new_card" key={item.id}>
                   <img src={item.image} alt="" className="card_img" />
                   <div className="card_content">
                     <div className="price_title">
                       <p className="item_title">
                         {shortenTitle(item.title, 40)}
                       </p>
-                      <h3 className="card_price">Rs{item.price}</h3>
+                     
+                     {/* <div className="flex flex-row justify-between"> */}
+                     <h3 className="card_price">Rs{item.price}</h3>
+                     {/* <h2 className="px-[15px] py-[10px] font-bold bg-green-600 text-white">{item.qnty}</h2> */}
+                     {/* </div> */}
                     </div>
-
+                   
+                   <div className="flex flex-col sm:flex-row-reverse gap-[10px]">
                     <img
                       className="deleteBtn"
                       src={Delete}
                       alt="delete"
-                      onClick={() => removeItem(item.uniqueId)}
+                      onClick={() => removeItem(item.id)}
                     />
+                   <h2 className="px-[10px] py-[5px] font-bold bg-green-600 text-white">{item.qnty}</h2>
+
+                   </div>
                   </div>
                 </div>
               ))}
@@ -99,3 +116,6 @@ const Cart = () => {
 };
 
 export default Cart;
+
+
+

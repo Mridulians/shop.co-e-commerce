@@ -2,17 +2,18 @@
 import "./Details.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { add } from "../../Features/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
 import Rating from "../../ASSETS_NEW/Rating.png";
-// import data from "../Complete_Selling/Seller";
 import Arrival from "../New_Arrivals/Arrival";
+import { ADD  , REMOVE} from "../../Reduxx/actions/action";
 
 const Details = ({ data }) => {
   const dispatch = useDispatch();
+  const carts = useSelector((state) => state.cartreducer.carts);
+
+  const [quantities, setQuantities] = useState({});
   const { id } = useParams();
   const [selectedSize, setSelectedSize] = useState("Medium");
-  const [count, setCount] = useState(1);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   // Find the selected product based on id
@@ -26,6 +27,14 @@ const Details = ({ data }) => {
     window.scrollTo(0, 0); // Scrolls to the top of the page
   }, [id]);
 
+  useEffect(() => {
+    const initialQuantities = {};
+    carts.forEach((item) => {
+      initialQuantities[item.id] = item.qnty;
+    });
+    setQuantities(initialQuantities);
+  }, [carts]);
+
   if (!selectedProduct) {
     return <div>Loading...</div>;
   }
@@ -37,20 +46,18 @@ const Details = ({ data }) => {
     setSelectedSize(size);
   };
 
-  const CountDecrementer = () => {
-    if (count > 1) {
-      setCount(count - 1);
-    }
-  };
-
-  const CountIncrementor = () => {
-    setCount(count + 1);
-  };
-
   const addToCart = (item) => {
-    dispatch(add(item));
+    dispatch(ADD(item));
+    setQuantities((prev) => ({
+      ...prev,
+      [item.id]: (prev[item.id] || 0) + 1,
+    }));
     console.log(item);
   };
+
+  const remove = (item)=>{
+    dispatch(REMOVE(item));
+   }
 
   return (
     <>
@@ -80,15 +87,17 @@ const Details = ({ data }) => {
           </div>
 
           <div className="counter_addtocart">
-            <div className="quantity_counter">
-              <button onClick={CountDecrementer}>-</button>
-              {count}
-              <button onClick={CountIncrementor}>+</button>
-            </div>
-
-            <button onClick={() => addToCart(selectedProduct)}>
-              Add to cart
-            </button>
+             {quantities[selectedProduct.id] > 0 ? (
+              <div className="flex flex-row gap-[2rem] rounded-[2rem] text-[1.5rem] font-bold sm:px-[2rem] sm:py-[10px] px-[1rem] py-[5px] bg-gray-300">
+                <button onClick={()=> remove(selectedProduct)}>-</button>
+                {quantities[selectedProduct.id]}
+                <button onClick={() => addToCart(selectedProduct)}>+</button>
+              </div>
+            ) : (
+              <button onClick={() => addToCart(selectedProduct)} className="addToCart">
+               Add to cart
+              </button>
+            )}
           </div>
         </div>
       </div>
