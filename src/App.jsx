@@ -27,6 +27,7 @@ import ShopData from "./new_components/Shop/ShopData";
 import BrandData from "./new_components/Brands/BrandData";
 import DesktopSearch from "./new_components/Search/DesktopSearch";
 import Address from "./new_components/Address/Address";
+import CartView from "./new_components/Cart/CartView";
 
 const App = () => {
   return (
@@ -54,6 +55,7 @@ const App = () => {
         <Route path="/casual/:id" element={<Details data={CasualData} />} />
         <Route path="/party/:id" element={<Details data={PartyData} />} />
         <Route path="/gym/:id" element={<Details data={GymData} />} />
+        <Route path="/view/:id" element={<CartView/>} />
 
         <Route
           path="/casual"

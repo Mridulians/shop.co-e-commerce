@@ -7,7 +7,7 @@ import Delete from "../../ASSETS_NEW/delete.png";
 import EmptyCart from "../../ASSETS_NEW/empty_cart.png";
 import Checkout from "./Checkout";
 import {DLT} from '../../Reduxx/actions/action'
-
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   useEffect(() => {
@@ -18,6 +18,8 @@ const Cart = () => {
   const productCard = useSelector((state) => state.cartreducer.carts);
   
   console.log(productCard);
+
+  const navigate = useNavigate(); //
 
   const removeItem = (uniqueId) => {
     dispatch(DLT(uniqueId));
@@ -57,7 +59,9 @@ const Cart = () => {
   ).toFixed(2);
 
   // console.log(finalPrice);
-
+  const navigateToDetails = (id) => {
+    navigate(`/view/${id}`); // Navigate to the product details page
+  };
 
   return (
     <>
@@ -68,7 +72,7 @@ const Cart = () => {
             <div className="cartAllData">
               {productCard.map((item) => (
                 <div className="new_card" key={item.id}>
-                  <img src={item.image} alt="" className="card_img" />
+                  <img src={item.image} alt="" className="card_img" onClick={() => navigateToDetails(item.id)}/>
                   <div className="card_content">
                     <div className="price_title">
                       <p className="item_title">

@@ -1,36 +1,22 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import "./Product.css";
-import { useDispatch, useSelector } from "react-redux";
-import Rating from "../../ASSETS_NEW/Rating.png";
-import Arrival from "../New_Arrivals/Arrival";
-import { ADD , REMOVE } from "../../Reduxx/actions/action";
+// import React from 'react'
 
-const Product = () => {
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams , useNavigate } from "react-router-dom";
+import Rating from "../../ASSETS_NEW/Rating.png";
+import { ADD  , REMOVE} from "../../Reduxx/actions/action";
+
+
+const CartView = () => {
+ const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { id } = useParams();
   const carts = useSelector((state) => state.cartreducer.carts);
 
+  const [selectedSize, setSelectedSize] = useState("Medium");
   const [quantities, setQuantities] = useState({});
 
-  const [selectedProduct, setSelectedProduct] = useState();
-  const [selectedSize, setSelectedSize] = useState("Medium");
   useEffect(() => {
-    const fetchProduct = async () => {
-      try {
-        const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-        const data = await response.json();
-        // console.log(data);
-        setSelectedProduct(data);
-      } catch (error) {
-        console.log("Error occurs", error);
-      }
-    };
-
-    fetchProduct();
-  }, [id]);
-
-  useEffect(() => {
+    window.scrollTo(0, 0); 
     const initialQuantities = {};
     carts.forEach((item) => {
       initialQuantities[item.id] = item.qnty;
@@ -38,37 +24,54 @@ const Product = () => {
     setQuantities(initialQuantities);
   }, [carts]);
 
+    const { id } = useParams(); // Get the product ID from the URL
+  const productCard = useSelector((state) => state.cartreducer.carts);
+
+  // Find the product with the matching ID
+  const selectedProduct = productCard.find((product) => product.id === parseInt(id));
+
   if (!selectedProduct) {
-    return <div>Loading...</div>;
+    return <div>Product not found</div>;
   }
 
-  // Example sizes
-  const sizes = ["Small", "Medium", "Large", "X-Large"];
+  
 
-  const handleSizeSelect = (size) => {
-    setSelectedSize(size);
-  };
+  console.log(selectedProduct);
 
- 
+ // Example sizes
+ const sizes = ["Small", "Medium", "Large", "X-Large"];
 
-  const addToCart = (item) => {
-    dispatch(ADD(item));
-    setQuantities((prev) => ({
+ const handleSizeSelect = (size) => {
+   setSelectedSize(size);
+ };
+
+ const addToCart = (item) => {
+  dispatch(ADD(item));
+  setQuantities((prev) => ({
+    ...prev,
+    [item.id]: (prev[item.id] || 0) + 1,
+  }));
+  console.log(item);
+};
+
+const remove = (item) => {
+  dispatch(REMOVE(item));
+  setQuantities((prev) => {
+    const newQuantities = {
       ...prev,
-      [item.id]: (prev[item.id] || 0) + 1,
-    }));
-    console.log(item);
-  };
+      [item.id]: (prev[item.id] || 0) - 1,
+    };
+    if (newQuantities[item.id] < 1) {
+      navigate("/cart");
+    }
+    return newQuantities;
+  });
+};
+     
 
-  const remove = (item)=>{
-    dispatch(REMOVE(item));
-   }
-
-
-  console.log(selectedProduct)
   return (
     <>
-      <div className="complete_details">
+    <div className="complete_details">
         <div className="complete_details_img">
           <img src={selectedProduct.image} alt="product" />
         </div>
@@ -77,7 +80,7 @@ const Product = () => {
           <h2 className="item_details_title">{selectedProduct.title}</h2>
           <img src={Rating} alt="rating" className="rating" />
           <span className="item_details_price">Rs {selectedProduct.price}</span>
-          <p className="item_details_desc">{selectedProduct.description}</p>
+          <p className="item_details_desc">{selectedProduct.desc}</p>
           <div className="size_selector">
             <p>Choose Size:</p>
             {sizes.map((size, index) => (
@@ -94,7 +97,7 @@ const Product = () => {
           </div>
 
           <div className="counter_addtocart">
-            {quantities[selectedProduct.id] > 0 ? (
+             {quantities[selectedProduct.id] > 0 ? (
               <div className="flex flex-row gap-[2rem] rounded-[2rem] text-[1.5rem] font-bold sm:px-[2rem] sm:py-[10px] px-[1rem] py-[5px] bg-gray-300">
                 <button onClick={()=> remove(selectedProduct)}>-</button>
                 {quantities[selectedProduct.id]}
@@ -108,10 +111,8 @@ const Product = () => {
           </div>
         </div>
       </div>
-
-      <Arrival title="You might also like" />
     </>
   );
 };
 
-export default Product;
+export default CartView;
